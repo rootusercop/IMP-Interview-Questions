@@ -1,3 +1,21 @@
 2 SUM Problem
 http://coderevisited.com/2-sum-problem/
 http://www.careercup.com/question?id=15206700
+
+
+To reverse a string in Java:
+
+package BST_Demo;
+
+public class ReverseArray {
+public static void main(String[] args) {
+	
+	String givenString = "Am I bad ? ";
+			StringBuilder reverse=new StringBuilder(givenString.length());
+			for(int i=givenString.length()-1;i>=0;i--){
+				reverse.append(givenString.charAt(i));
+			}
+			System.out.println(reverse);
+	
+}
+}
