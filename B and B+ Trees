@@ -1,0 +1,31 @@
+For understanding the importance and the need for B+ and B trees, please go through the material given in the
+below links
+
+
+Motivation for B-Trees
+Index structures for large datasets cannot be stored in main memory
+Storing it on disk requires different approach to efficiency
+Assuming that a disk spins at 3600 RPM,  one revolution occurs in 1/60 of a second, or 16.7ms
+Crudely speaking, one disk access takes about the same time as 200,000 instructions
+Assume that we use an AVL tree to store about 20 million records
+We end up with a very deep binary tree with lots of different disk accesses; log2 20,000,000 is about 24,
+so this takes about 0.2 seconds  
+We know we can’t improve on the log n lower bound on search for a binary tree
+But, the solution is to use more branches and thus reduce the height of the tree!
+As branching increases, depth decreases
+A B-tree of order m is an m-way tree (i.e., a tree where each node may have up to m children) in which:
+1.	the number of keys in each non-leaf node is one less than the number of its children and these keys
+    partition the keys in the children in the fashion of a search tree
+2.	all leaves are on the same level
+3.	all non-leaf nodes except the root have at least m / 2 children
+4.	the root is either a leaf node, or it has from two to m children
+5.	a leaf node contains no more than m – 1 keys
+The number m should always be odd
+
+(VERY IMP)Please go through the below links:
+
+cecs.wright.edu/~tkprasad/courses/cs707/L04-X-B-Trees.ppt
+http://bluerwhite.org/btree/#applications
+http://www.entrycoder.com/2013/04/difference-between-b-and-b-tree-in.html
+http://stackoverflow.com/questions/870218/b-trees-b-trees-difference
+http://guide.couchdb.org/draft/btree.html
