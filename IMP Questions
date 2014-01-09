@@ -29,3 +29,10 @@ How to implement a stack which will support following operations in O(1) time co
 Push and pop are standard stack operations.
 
 http://www.geeksforgeeks.org/design-a-stack-with-find-middle-operation/
+
+
+Very IMP Q -> Disadvantages of HashMap or Hashtable OR Why is BALANCED TREES better than using Hashtable
+or HashMap?
+Ans -> http://stackoverflow.com/questions/6924852/what-are-the-disadvantages-to-hashmaps
+http://web.archive.org/web/20090430172748/http://enfranchisedmind.com/blog/posts/problems-with-hash-tables/
+http://en.wikipedia.org/wiki/Hash_table#Drawbacks
