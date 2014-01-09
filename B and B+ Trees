@@ -29,3 +29,28 @@ http://bluerwhite.org/btree/#applications
 http://www.entrycoder.com/2013/04/difference-between-b-and-b-tree-in.html
 http://stackoverflow.com/questions/870218/b-trees-b-trees-difference
 http://guide.couchdb.org/draft/btree.html
+
+
+Advantages of B and B+ Tress over Biary Search Trees:
+source -> http://stackoverflow.com/questions/15485220/advantage-of-b-trees-over-bsts
+The major advantage of the B+ tree (and B-trees in general) over binary search trees is
+that they play well with caches. If you have a binary search tree whose nodes are stored in
+more or less random order in memory, then each time you follow a pointer, the machine will have
+to pull in a new block of memory into the processor cache, which is dramatically slower than
+accessing memory already in cache.
+
+The B+-tree and the B-tree work by having each node store a huge number of keys or values and
+have a large number of children. They are typically packed together in a way that makes it possible
+for a single node to fit nicely into cache (or, if stored on disk, to be pulled from the disk in a
+single read operation). You then have to do more work to find a key within the node or determine
+which child to read next, but because all memory accesses done on a single node can be done without
+going back to disk, the access times are very small. This means that even though in principle a BST
+might be better in terms of number of memory accesses, the B+-tree and the B-tree can performed better
+in terms of the runtime of those memory accesses.
+
+The typical use case for a B+-tree or B-tree is in a database, where there is a huge amount of
+information and the data are so numerous that they can't all fit into main memory. Accordingly,
+the data can then be stored in a B+-tree or B-tree on a hard disk somewhere. This minimizes the
+number of disk reads necessary to pull in the data during lookups. Some filesystems (like ext4, I believe)
+use B-trees as well for the same reason - they minimize the number of disk lookups necessary,
+which is the real bottleneck.
