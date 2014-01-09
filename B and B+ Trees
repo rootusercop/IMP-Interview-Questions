@@ -17,9 +17,9 @@ A B-tree of order m is an m-way tree (i.e., a tree where each node may have up t
 1.	the number of keys in each non-leaf node is one less than the number of its children and these keys
     partition the keys in the children in the fashion of a search tree
 2.	all leaves are on the same level
-3.	all non-leaf nodes except the root have at least m / 2 children
+3.	all non-leaf nodes except the root have at least m/2 children
 4.	the root is either a leaf node, or it has from two to m children
-5.	a leaf node contains no more than m – 1 keys
+5.	a leaf node contains no more than m–1 keys
 The number m should always be odd
 
 (VERY IMP)Please go through the below links:
