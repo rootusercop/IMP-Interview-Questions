@@ -2,6 +2,11 @@ For understanding the importance and the need for B+ and B trees, please go thro
 below links
 
 
+PLEASE NOT THAT:
+1) B-Trees and B+ Trees are not BINARY(having 2 children) TREES, 
+   they are Multiway(M-way, that is having M children) Trees.
+2) Both B and B+ trees are SEARCH(that is left is less than right) Trees.
+
 Motivation for B-Trees
 Index structures for large datasets cannot be stored in main memory
 Storing it on disk requires different approach to efficiency
