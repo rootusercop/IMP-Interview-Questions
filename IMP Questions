@@ -2,6 +2,30 @@
 http://coderevisited.com/2-sum-problem/
 http://www.careercup.com/question?id=15206700
 
+Sample Java code for finding if f there exists any pair of integers whose sum is xJava
+
+
+public static void findTwoSum(int[] A, int x) {
+    Arrays.sort(A);        
+    int start = 0;
+    int end = A.length - 1;
+    boolean found = false;
+    while (!found && start < end) {
+        if (A[start] + A[end] == x)
+            found = true;
+        else if (A[start] + A[end] > x)
+            end--;
+        else if (A[start] + A[end] < x)
+            start++;
+    }
+    if (found)
+        System.out.println("Sum " + x
+                + " is found, values the making sum are " + A[start] + " , "
+                + A[end]);
+    else
+        System.out.println("No pair exists whose sum is " + x);
+}
+
 
 To reverse a string in Java:
 
