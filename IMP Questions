@@ -2,9 +2,18 @@
 http://coderevisited.com/2-sum-problem/
 http://www.careercup.com/question?id=15206700
 
-Sample Java code for finding if f there exists any pair of integers whose sum is xJava
 
+The 2 sum problem is a classic variation of the subset sum problem. It is defined as the following: 
+You have an unsorted array, and you are given a value S. Find all pairs of elements in the array that
+add up to value S. 
+2 solutions - one minimizes space complexity, and the other time. As stated in the "hint", 
+one approach is to hash the entire array, and then for each element check if S-array[j] is in the 
+hash table. This takes O(n) time and O(n) space to store the array. 
+Alternatively, if one wishes to minimize space complexity, simply sort the array. Then, have two
+pointers - one initialized to array[0] and the other array[length-1]. Then check the sums; if the
+sum is > S, decrement the right pointer. If it is < S, increment the left pointer.
 
+Sample Java code for the second method of finding 2sum:
 public static void findTwoSum(int[] A, int x) {
     Arrays.sort(A);        
     int start = 0;
