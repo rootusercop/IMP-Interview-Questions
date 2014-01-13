@@ -1,0 +1,96 @@
+Source-> http://javarevisited.blogspot.com/2012/04/difference-between-list-and-set-in-java.html
+
+
+Please Note: This is much better explanation than given in the link above.
+
+List vs Set in Java
+
+Difference between Set and List in Javahere are few note worthy differences between List and Set in Java.
+Remember that both of them are used to store objects and provides convenient API to insert, remove and
+retrieve elements, along with to support Iteration over collection.
+
+1) Fundamental difference between List and Set in Java is allowing duplicate elements. List in Java allows
+duplicates while Set doesn't allow any duplicate. If you insert duplicate in Set it will replace the older
+value. While if a duplicate is inserted in a List, it will be appended as the next element in the List.
+In case of duplicates in Map, if the keys are the same, the value of the latest will overwrite the value
+previously existed at that same key. (Remember, Map works on KEY-VALUE pairs)
+
+2) Another significant difference between List and Set in Java is order. List is an Ordered Collection while
+Set is an unordered Collection. List maintains insertion order of elements, means any element which is 
+inserted before will go on lower index than any element which is inserted after. Set in Java doesn't  
+maintain any order. Though Set provide another alternative called SortedSet which can store Set elements 
+in specific Sorting order defined by Comparable and Comparator methods of Objects stored in Set.
+
+3) Set uses equals() method to check uniqueness of elements stored in Set, while SortedSet uses compareTo()
+method to implement natural sorting order of elements. In order for an element to behave properly in Set and
+SortedSet, equals and compareTo must be consistent to each other.
+
+4) Popular implementation of List interface in Java includes ArrayList, Vector and LinkedList. While popular
+implementation of Set interface includes HashSet, TreeSet and LinkedHashSet.
+
+
+Read more: http://javarevisited.blogspot.com/2012/04/difference-between-list-and-set-in-java.html#ixzz2qF8yRnUr
+
+
+Code to test the statements written above:
+import java.awt.List;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Set;
+
+public class Difference {
+public static void main(String[] args) {
+        Set<Integer> sets=new HashSet<Integer>();
+        sets.add(1);
+        sets.add(1);
+        System.out.println(sets.size());
+        
+        LinkedList<Integer> lists=new LinkedList<Integer>();
+        lists.add(1);
+        lists.add(1);
+        System.out.println(lists.size());
+        
+        Map<Integer, Integer> maps=new HashMap<Integer, Integer>();
+        maps.put(1, 1);
+        maps.put(1, 2); // Just to check whether the pevious VALUE at the same key is over written or not.
+        System.out.println(maps.size());
+        System.out.println(maps.get(1)); // Output comes 2, hence the pevious VALUE at the same key is over written
+}
+}
+
+/*
+Output
+
+1 //size of Set
+2 //size of List
+1 //size of Map
+2 // value at key 1 of the Map
+
+*/
+
+Ordered lists of element (unique or not)
+Conform to Java's interface named List
+Can be accessed by index
+
+LinkedList
+ArrayList
+Lists of unique elements:
+Conform to Java's interface named Set
+Can not be accessed by index
+
+HashSet (unordered)
+LinkedHashSet (ordered)
+TreeSet (sorted by natural order or by provided comparator)
+Both interfaces Set and List conform to Java's interface named Collection
+
+╔═══════════════════╦══════════════════════╦═════════════════════════════╗
+║                   ║         List         ║            Set              ║
+╠═══════════════════╬══════════════════════╬═════════════════════════════╣
+║     Duplicates    ║          YES         ║            NO               ║
+╠═══════════════════╬══════════════════════╬═════════════════════════════╣
+║       Order       ║       ORDERED        ║  DEPENDS ON IMPLEMENTATION  ║
+╠═══════════════════╬══════════════════════╬═════════════════════════════╣
+║ Positional Access ║         YES          ║            NO               ║ 
+╚═══════════════════╩══════════════════════╩═════════════════════════════╝
