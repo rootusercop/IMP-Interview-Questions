@@ -1,0 +1,61 @@
+Source -> http://javarevisited.blogspot.com/2013/07/difference-between-array-and-linked-list-java.html
+       -> http://stackoverflow.com/questions/166884/array-vs-linked-list
+
+
+Array vs linked list in Java
+
+array vs linked list in JavaHere is my list of differences between array and linked list. 
+Though data structure concept are independent of any programming language and more or less 
+applicable in all programming language including C and C++, I have explained differences in Java's context.
+
+1. First and major difference between linked list and array data structure is that former doesn't
+support random access, while later support random access. linked list is sequential, in order to 
+retrieve an element, you need to traverse till that, while if you know index, you can retrieve an 
+element from array very quickly, because it doesn't involved traversal.
+
+2. Second major difference between array and linked-list data structure is that, array needs contiguous 
+memory allocation, which may result in java.lang.OutOfMemoryError: Java Heap Space if there is not enough
+contiguous ( a big chunk) of memory in Java Heap. On the other hand, linked list is distributed data
+structure, it's element are scattered over heap and doesn't need a contiguous memory allocation. This
+makes linked list ideal, if you have scattered memory.
+
+3. Third major difference is fixed length, array is a fixed length data structure, you provide length 
+or size of array at the time of creation, later you can not modify that size. On the other hand, linked
+list is dynamic data structure, it can grow and doesn't required size to be specified at the time of 
+creation, because each node keep tracks of other.
+
+4. It's easy to insert and delete elements from linked list than array, especially inserting element
+at beginning of linked list, and deleting element from end of linked list is O(1) operation. On the 
+other hand array is fixed length data structure, so memory is allocated during initialization, and doesn't
+really change due to addition and removal of elements.  Though you can set a particular index null, to cut
+the reference count of that object.
+
+5. Array is ideal for implementing fast caches e.g. HashMap or Hashtable, which requires constant time 
+retrieval e.g. Map data structure provides O(1) performance for get(Key key) operation, while linked list
+based structure provides liner performance i.e. O(n) for retrieval operation, where n is the number of
+elements in linked list.
+
+6. Array can be one or multi-dimensional, while linked list can be singly, doubly or circular linked list.
+Two dimensional array are most common in multi-dimensional and used to represent matrix in Java. You can 
+use two dimensional array to represent a plain of x,y coordinates, frequently used in Game programming. 
+Java programming language provides support for creating array at syntax level, it supports both single 
+and multidimensional array. Java API also provides a class called java.util.LinkedList, which is an 
+implementation of doubly linked list data structure.
+
+That's all on my list of differences between array and linked list data structure. I strongly suggest
+to get a good hold of these data structure, especially linked list, which is very popular among data
+structure interview questions. Questions like appending elements into linked list, deleting elements,
+reversing linked list are quite common in various programming jobs. At very least, knowledge of 
+fundamental data structure is essential to do well in programming jobs.
+
+
+Read more: http://javarevisited.blogspot.com/2013/07/difference-between-array-and-linked-list-java.html#ixzz2qGX08GX3
+
+It's easier to store data of different sizes in a linked list. An array assumes every element is
+exactly the same size.
+As you mentioned, it's easier for a linked list to grow organically. An array's size needs to be 
+known ahead of time, or re-created when it needs to grow.
+Shuffling a linked list is just a matter of changing what points to what. Shuffling an array is 
+more complicated and/or takes more memory.
+As long as your iterations all happen in a "foreach" context, you don't lose any performance in 
+iteration.
