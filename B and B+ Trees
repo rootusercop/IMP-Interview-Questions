@@ -1,0 +1,93 @@
+For understanding the importance and the need for B+ and B trees, please go through the material given in the
+below links
+
+
+PLEASE NOT THAT:
+1) B-Trees and B+ Trees are not BINARY(having 2 children) TREES, 
+   they are Multiway(M-way, that is having M children) Trees.
+2) Both B and B+ trees are SEARCH(that is left is less than right) Trees.
+
+Motivation for B-Trees
+Index structures for large datasets cannot be stored in main memory
+Storing it on disk requires different approach to efficiency
+Assuming that a disk spins at 3600 RPM,  one revolution occurs in 1/60 of a second, or 16.7ms
+Crudely speaking, one disk access takes about the same time as 200,000 instructions
+Assume that we use an AVL tree to store about 20 million records
+We end up with a very deep binary tree with lots of different disk accesses; log2 20,000,000 is about 24,
+so this takes about 0.2 seconds  
+We know we can’t improve on the log n lower bound on search for a binary tree
+But, the solution is to use more branches and thus reduce the height of the tree!
+As branching increases, depth decreases
+A B-tree of order m is an m-way tree (i.e., a tree where each node may have up to m children) in which:
+1.        the number of keys in each non-leaf node is one less than the number of its children and these keys
+    partition the keys in the children in the fashion of a search tree
+2.        all leaves are on the same level
+3.        all non-leaf nodes except the root have at least m/2 children
+4.        the root is either a leaf node, or it has from two to m children
+5.        a leaf node contains no more than m–1 keys
+The number m should always be odd
+
+(VERY IMP)Please go through the below links:
+
+cecs.wright.edu/~tkprasad/courses/cs707/L04-X-B-Trees.ppt
+http://bluerwhite.org/btree/#applications
+http://ayende.com/blog/162945/b-trees-and-why-i-love-them-part-i
+http://toyhouse.cc/profiles/blogs/b-tree-b-tree-amp-b-tree
+http://www.entrycoder.com/2013/04/difference-between-b-and-b-tree-in.html
+http://stackoverflow.com/questions/870218/b-trees-b-trees-difference
+http://guide.couchdb.org/draft/btree.html
+
+
+Advantages of B and B+ Tress over Biary Search Trees:
+source -> http://stackoverflow.com/questions/15485220/advantage-of-b-trees-over-bsts
+The major advantage of the B+ tree (and B-trees in general) over binary search trees is
+that they play well with caches. If you have a binary search tree whose nodes are stored in
+more or less random order in memory, then each time you follow a pointer, the machine will have
+to pull in a new block of memory into the processor cache, which is dramatically slower than
+accessing memory already in cache.
+
+The B+-tree and the B-tree work by having each node store a huge number of keys or values and
+have a large number of children. They are typically packed together in a way that makes it possible
+for a single node to fit nicely into cache (or, if stored on disk, to be pulled from the disk in a
+single read operation). You then have to do more work to find a key within the node or determine
+which child to read next, but because all memory accesses done on a single node can be done without
+going back to disk, the access times are very small. This means that even though in principle a BST
+might be better in terms of number of memory accesses, the B+-tree and the B-tree can performed better
+in terms of the runtime of those memory accesses.
+
+The typical use case for a B+-tree or B-tree is in a database, where there is a huge amount of
+information and the data are so numerous that they can't all fit into main memory. Accordingly,
+the data can then be stored in a B+-tree or B-tree on a hard disk somewhere. This minimizes the
+number of disk reads necessary to pull in the data during lookups. Some filesystems (like ext4, I believe)
+use B-trees as well for the same reason - they minimize the number of disk lookups necessary,
+which is the real bottleneck.
+
+
+Advantages of B+ Trees over B-Trees
+source -> http://www.quora.com/What-are-the-advantages-of-B+-Tree-over-B-Tree
+Short Answer:
+It's all about branching factor. Because of the way B+-Trees store records (called "satellite information") at the leaf level of the tree, they maximize the branching factor of the internal nodes. High branching factor allows for a tree of  lower height. Lower tree height allows for less disk I/O. Less disk I/O theoretically means better performance.
+
+Long Answer:
+B-Trees ("B Trees") and B+-Trees ("B Plus Trees") are balanced search trees that perform well
+on magnetic media and secondary storage because they minimize disk I/O ops. 
+
+* As a matter of background information, in a typical 7200 RPM disk drive one platter rotation
+takes ~8.3ms which is ~5 orders of magnitude longer than the typical 100ns access time of silicon memory.
+So using the most efficient data structures to do dynamic set operations (like Search() Create() Insert())
+is very important. 
+
+B-Tree algorithms are good for accessing pages (or blocks) of stored information which are then 
+copied into main memory for processing. In the worst case, they are designed to do dynamic set operations
+in O(lg n) time because of their high "branching factor" (think hundreds or thousands of keys off of any
+node). It is this branching factor that makes B-Trees so efficient for block storage/retrieval,
+since a large branching factor greatly reduces the height of the tree and thus the number of 
+disk accesses needed to find any key!
+
+* For relative sizing reference: A B-Tree with a branching factor of 1001 and a height of 2
+can store over 1 Billion keys! And since the root node can be kept in main memory, you only need
+2 disk accesses to find any key in this tree!
+
+In B+-Trees, all records ("satellite information") are stored at the leaf level while keys and 
+child pointers are stored in interior nodes (aka non-leaf nodes). This maximizes the branching factor
+of the internal nodes.  This is the advantage of a B+-Tree over a regular B-Tree.
