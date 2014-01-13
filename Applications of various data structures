@@ -1,0 +1,91 @@
+Queue:
+1) Queueing processes : any device does not have infinite resources, so a queue has 
+   to be used in order to allocate resources to those process that need it on a priority level.
+
+Bloom filters:
+1) In shortening URLs.
+
+Graphs:
+1) GIS : in Geographic Informative Systems, transport and vehicular technology.
+2) Maps : Google Maps, Bing, etc.
+3) Paths between points(keys) : Like the A* Algorithm, etc.
+
+Trees 
+1) Data base designing : creating your own database just to store the data based upon some key value
+2) Creating file system : Operating systems maintain a disk's file system as a tree.
+3) Zoology: Maintaining the structures of the entire animal & plant kingdom.
+4) Social Networks : Establishing relations between users based on some key.
+
+B-Trees (Binary Trees): 
+1) E-commerce : while accessing unique keys. B-Trees balanced multi-way search tree of order N.
+2) Searching : Searching quickly for a given element.
+3) For File Systems
+
+Hash Tables:
+1) In Banks for combining two or more accounts for matching Social Security Numbers.
+
+Trie(prefix tree):
+1) In auto-complete dictionary in mobiles, search engines etc.
+2) As approximate algorithms in spell-checking
+
+B+ Trees
+1) for building Data Bases 
+
+Splay Tree:
+1) Used in caches
+
+Suffix tree:
+1) Genomic sequencing
+ 
+ 
+★ Question ->Why are Red-Black trees used more often in industry than AVL trees?
+Though AVL trees appear to be simpler (ie. fewer cases to handle) and have shorter heights,
+yet Red-Black trees appear more predominate (ie. used in Java and in functional language implementations)
+
+There are two popular Balanced Binary Search Tree: AVL Tree and Red-Black Tree.
+Both offers O(lg n) search time. But the hidden constant behind Big O makes AVL Tree more 
+suitable for search and Red-Black Tree for insertion-deletion. Insertion-deletion takes less 
+time in Red-Black Tree than AVL Tree. That's Red-Black Tree are more popular than AVL Tree although
+implementing Red-Black is very complicated task.
+
+RBs handle all operations better on average (insertion, retrieval, deletes), 
+whilst AVLs are good for frequent retrievals, but infrequent insertions and deletes.
+
+That being said, RBs are suitable for more situations than AVLs.
+
+
+Special trees, special lists and probabilistic data structures -
+
+Skiplist:
+Used by Redis datastore for the implementation of ordered sets.
+Used in nessDB.
+
+Bloom filter:
+Used by Cassandra to check which SSTables mostly contains the key.
+Hbase also uses it to optimize the reads.
+
+LSM trees:
+Used by Cassandra(SSTables), Big table for storage.
+
+Merkle tree:
+Used by various eventually consistent datastores like Dynamo, Cassandra for anti-entropy mechanism.
+
+
+Judy Tree:
+I want to talk about one awesome in-memory data structure which is not yet discussed in this thread
+
+JudyTree is the efficient in-memory data structure which is fast and consumes less memory
+
+Judy has two main strategies: use a 256-ary tree, compressed and designed to require one (at most two)
+secondary cache misses per tree node lookups 
+
+A (CPU) cache-line fill is additional time required to read from RAM when a word is not found in cache. 
+In today’s computers the time for a cache-line fill is in the range of 50..2000 machine instructions. 
+Hence a cache-line fill should be avoided when fewer than 50 instructions can do the same job.
+
+* Judy is generally faster then a hashing method and popular forms of balanced binary tree
+* Judy is cache - concious because its designed to avoid cache-line fills wherever possible
+* Judy tree is more memory-efficient than almost any other competitive structure
+
+Useful link: A 10 minute description of how Judy arrays work and why they are so fast: 
+http://judy.sourceforge.net/doc/10minutes.htm
