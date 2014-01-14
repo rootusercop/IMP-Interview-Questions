@@ -66,7 +66,10 @@ which is the real bottleneck.
 Advantages of B+ Trees over B-Trees
 source -> http://www.quora.com/What-are-the-advantages-of-B+-Tree-over-B-Tree
 Short Answer:
-It's all about branching factor. Because of the way B+-Trees store records (called "satellite information") at the leaf level of the tree, they maximize the branching factor of the internal nodes. High branching factor allows for a tree of  lower height. Lower tree height allows for less disk I/O. Less disk I/O theoretically means better performance.
+It's all about branching factor. Because of the way B+-Trees store records (called "satellite information") 
+at the leaf level of the tree, they maximize the branching factor of the internal nodes.
+High branching factor allows for a tree of  lower height. Lower tree height allows for less disk I/O.
+Less disk I/O theoretically means better performance.
 
 Long Answer:
 B-Trees ("B Trees") and B+-Trees ("B Plus Trees") are balanced search trees that perform well
