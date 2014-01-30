@@ -1,1 +1,5 @@
 http://programmers.stackexchange.com/questions/174963/inter-process-and-inter-thread-data-sharing
+
+Interthread Communication: mutex, semaphores
+
+Interprocess Communication: http://www.tldp.org/LDP/tlk/ipc/ipc.html
