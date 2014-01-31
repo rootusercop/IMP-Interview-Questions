@@ -1,0 +1,24 @@
+final - keyword
+finally - block
+finalize - method
+
+final:
+	final is a keyword. The variable decleared as final should be
+	initialized only once and cannot be changed. Java classes
+	declared as final cannot be extended. Methods declared as final
+	cannot be overridden.
+	
+finally:
+	finally is a block. The finally block always executes when the
+	try block exits. This ensures that the finally block is executed
+	even if an unexpected exception occurs. But finally is useful for
+	more than just exception handling - it allows the programmer to
+	avoid having cleanup code accidentally bypassed by a return,
+	continue, or break. Putting cleanup code in a finally block is
+	always a good practice, even when no exceptions are anticipated.
+	
+finalize:
+	finalize is a method. Before an object is garbage collected, the
+	runtime system calls its finalize() method. You can write system
+	resources release code in finalize() method before getting garbage
+	collected.
