@@ -1,0 +1,8 @@
+System class belongs to the lang package. All the methods of the system class are static. Hence all the methods
+of the System class can be called in any program using
+"System.exit(1)" OR "System.gc()" format.
+
+Some of the important methods are menthioned in the System class. Please go through the Java docs for their
+information
+
+System Class Java Docs -> http://docs.oracle.com/javase/7/docs/api/java/lang/System.html
