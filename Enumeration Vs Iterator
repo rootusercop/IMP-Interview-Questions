@@ -1,7 +1,7 @@
 Both Enumeration and Iterator are interfaces in Java.
 Both are used to store the elements of a data structure in Java
 The functionality of Enumeration and the Iterator have minor difference. You can get remove() 
-from Iterator to remove an element, while while Enumeration does not have remove()
+from Iterator to remove an element, while Enumeration does not have remove()
 method. Using Enumeration you can only traverse and fetch the objects, where as using
 Iterator we can also add and remove the objects. So Iterator can be useful if you want
 to manipulate the list and Enumeration is for read-only access.
