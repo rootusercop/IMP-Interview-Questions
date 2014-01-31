@@ -1,0 +1,12 @@
+The == (double equals) returns true, if the variable reference points to the same object in memory. 
+This is called “shallow comparison”.
+
+The equals() method calls the user implemented equals() method, which compares the object attribute values. 
+The equals() method provides “deep comparison” by checking if two objects are logically equal as opposed to
+the shallow comparison provided by the operator ==.
+
+If equals() method does not exist in a user supplied class then the inherited Object class's equals() method 
+will be called which evaluates if the references point to the same object in memory. In this case, the object.
+equals() works just like the "==" operator.
+
+Source -> http://www.java2novice.com/java_interview_questions/==-and-equals/
