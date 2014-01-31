@@ -1,0 +1,20 @@
+Find out below switch statement output.
+
+
+public static void main(String a[]){
+	int price = 6;
+	switch (price) {
+		case 2: System.out.println("It is: 2");
+		default: System.out.println("It is: default");
+		case 5: System.out.println("It is: 5");
+		case 9: System.out.println("It is: 9");
+	}
+}
+
+
+Output:
+It is: default
+It is: 5
+It is: 9
+
+Explanation of Answer: Unless you write a break the code will continue to execute.
