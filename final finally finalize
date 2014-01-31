@@ -1,8 +1,7 @@
 final - keyword
 finally - block written after try{} catch{} or only try{}. finally{} should have try{} or both try{} catch{}
-          before it. It cannot exist alone. Complier will throw Syntax Error. Hence finally{} CANNOT exist 
-          alone.
-finalize - method called before System.gc() to free all the resources (i.e. refernces to ojects are made null)
+          before it. It cannot exist alone. Complier will throw Syntax Error. Hence finally{} CANNOT exist alone.
+finalize - method called before System.gc() to free all the resources (i.e. refernces to objects are made null)
 
 final:
 	final is a keyword. The variable decleared as final should be
