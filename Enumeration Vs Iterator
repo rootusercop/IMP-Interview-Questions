@@ -5,6 +5,14 @@ from Iterator to remove an element, while Enumeration does not have remove()
 method. Using Enumeration you can only traverse and fetch the objects, where as using
 Iterator we can also add and remove the objects. So Iterator can be useful if you want
 to manipulate the list and Enumeration is for read-only access.
+public interface Iterator<E>
+An iterator over a collection. Iterator takes the place of Enumeration in the Java Collections Framework.
+Iterators differ from enumerations in two ways:
+a) Iterators allow the caller to remove elements from the underlying collection during the iteration with
+   well-defined semantics.
+b) Method names have been improved.
+The Iterator interface is a member of the Java Collections Framework whereas the Enumeration interface is not.
+
 
 Please see Enumeration Java Docs -> http://docs.oracle.com/javase/6/docs/api/java/util/Enumeration.html
 Interface Java Docs -> http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html
