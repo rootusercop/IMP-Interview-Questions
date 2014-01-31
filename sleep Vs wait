@@ -1,0 +1,14 @@
+sleep():
+	It is a static method on Thread class. It makes the current thread into the
+	"Not Runnable" state for specified amount of time. During this time, the thread
+	keeps the lock (monitors) it has acquired.
+	
+wait():
+	It is a method on Object class. It makes the current thread into the "Not Runnable"
+	state. Wait is called on a object, not a thread. Before calling wait() method, the
+	object should be synchronized, means the object should be inside synchronized block.
+	The call to wait() releases the acquired lock.
+	
+For details please see the following:
+Thread Java Docs -> http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html
+Object Java Docs -> http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html
