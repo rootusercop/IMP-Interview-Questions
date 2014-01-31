@@ -9,9 +9,11 @@ b) All attributes(data members and not methods) are "public static final"
 Abstract Classes:
 a) Cannot be instantiated
 b) Methods can have defination. Some of the methods can be defined while some of the methods can be abstract.
-However an abstract class can have NO abstract methods. Even if a class does not have abstract methods but 
-is declared as abstract is said to be an abstract class.
+   However an abstract class can have NO abstract methods. Even if a class does not have abstract methods but 
+   is declared as abstract is said to be an abstract class.
 c) We have to explicitly declare the abstract methods as "public abstract" so that they can be defined by the
-classes which inherit the abstract class.
+   classes which inherit the abstract class.
 d) Abstract classes fall in between "Interfaces" and proper actual defined "Classes" since they have both the
-properties.
+   properties.
+e) A normal class cannot have abstract methods. If a method in a normal class is declared as abstract, then the
+   whole class has to be declared as abstract. Otherwise compilation and runtime error would take place.
