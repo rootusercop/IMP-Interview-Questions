@@ -3,3 +3,8 @@ http://java-questions.com/Threads_interview_questions.html
 
 Difference between Thread and Cores of a CPU(processor)
 http://www.tomshardware.com/forum/306079-28-what-core-thread
+
+
+Thread Count of a CPU:
+The core is the hardware the thread is the software, the thread count for a CPU is how many threads 
+it can handle at once.
