@@ -1,0 +1,6 @@
+http://javarevisited.blogspot.com/2013/01/difference-between-stack-and-heap-java.html
+
+
+IMP Q: Does each thread in java uses seperate stack?
+Ans: In Java every thread maintains its own separate stack. It is called Runtime Stack but 
+     they share the same memory.
