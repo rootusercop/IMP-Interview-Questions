@@ -41,7 +41,8 @@ synchronized section of code, only one of them may be executed at a time.
 It is like a bottleneck.
 
 It is even expensive when you use a single thread, because it has to check anyway if he is allowed to run.
-
+(Related Question: Are Synchronized Methods Slower In Single Threaded Applications also?
+Answer: Yes, explained in the line above this line and in the previous question as well. Have a look.
 If you reduce the use of synchronized segments your thread won't have to stop to see if they can run 
 ( of course, they don't have to share data )
 
