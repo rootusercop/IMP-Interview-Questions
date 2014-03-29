@@ -1,7 +1,7 @@
 Question:  What is default value of a local variables?
 Ans: The local variables are not initialized to any default values. We should
-not use local variables with out initialization. Even the java compiler
-throws error.
+not use local variables with out initialization. Even the java COMPILER(very important, not runtime but
+during compile time itself error is thrown) throws error.
 
 Example: 
 class AbstractDemo{
@@ -17,4 +17,4 @@ class AbstractDemo{
 	}
 }
 
-Output: Error: Local variable k not initialized
+Output: Complilation Error: Local variable k not initialized
