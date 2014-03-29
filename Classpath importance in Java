@@ -2,7 +2,7 @@ http://javarevisited.blogspot.com/2011/01/how-classpath-work-in-java.html
 
 
 
-Other Importance of Classpath:
+Other Importance of classpath:
 
 1.      Classpath in Java is an environment variable used by Java Virtual machine to locate or find 
 class files in Java during class loading.
