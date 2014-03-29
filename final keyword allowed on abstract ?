@@ -1,0 +1,3 @@
+Question: Can we declare abstract method as final?
+Ans: No, we can not declare abstract method as final. We have to
+proved implementation to abstract methods in subclasses.
