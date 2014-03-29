@@ -23,3 +23,13 @@ to release these resources through the finalize() method.
 global variables or functions.
 
 6) C++ requires explicit memory management, while Java includes automatic garbage collection.
+
+
+
+TO REMEMBER: GG-MS-PD
+G-> Global variables
+G-> Garbage Collection(required for memory management)
+M-> Multiple Inheritance
+S-> Struct and Union
+P-> Pointers
+D-> Destructors
