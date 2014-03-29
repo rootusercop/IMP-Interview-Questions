@@ -7,14 +7,12 @@ Non-static synchronized methods synchronize on this ie the instance of the class
 thread is executing a synchronized method, all other threads trying to execute any synchronized 
 methods will be blocked.
 
-Question: What is the difference between synchronized and static synchronized?
-Ans:
+
 
 BEST EXPLANATION:
 
 
-Trying to visualize and understand synchronization.
-
+Question:
 What are the differences between using a static lock object (code A)
 and a non-static lock object (code B) for a synchronized block?
 How does it differ in practical applications?
