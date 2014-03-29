@@ -1,0 +1,18 @@
+Read the below two IMP questions about finally block execution
+
+Question: Incase, there is a return at the end of try block, will execute finally block?
+Ans: Yes, the finally block will be executed even after writing return statement
+at the end fo try block. It returns after executing finally block.
+
+
+Question: Does system.exit() in try block executes code in finally block?
+	try{
+		System.out.println("I am in try block");
+		System.exit(1);
+	} catch(Exception ex){
+		ex.printStackTrace();
+	} finally {
+		System.out.println("I am in finally block!!!");
+	}
+Ans: It will not execute finally block. The program will be terminated
+after System.exit() statement.
