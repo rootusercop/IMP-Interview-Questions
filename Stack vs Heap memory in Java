@@ -18,7 +18,7 @@ which is launched as a process by "java" command. Java also uses both stack and 
 different needs. In our last article 10 points on Java heap space I have touched base on Java heap 
 space and in this article we will see difference between stack and heap memory in Java.
 
-Difference between Stack vs Heap in Java
+Difference between Stack vs Heap in Java:
 
 Difference between heap and statck in Java - Interview Question
 Here are few differences between stack and heap memory in Java:
