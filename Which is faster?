@@ -28,3 +28,20 @@ CPU caches to be shared with other CPUs, or some other memory barrier.
 For example, 
 read Do Java 6 threading optimizations actually work? - Part II.
 (The Part I was not as insightful as the Part II.)
+
+
+Question: Why are synchronized methods said to be comparitively slow to non-synchronized methods in java?
+Ans:
+
+Source: http://stackoverflow.com/questions/1671089/why-are-synchronize-expensive-in-java
+
+It is expensive because if you are using threads, and a number of threads have to go through a
+synchronized section of code, only one of them may be executed at a time.
+
+It is like a bottleneck.
+
+It is even expensive when you use a single thread, because it has to check anyway if he is allowed to run.
+
+If you reduce the use of synchronized segments your thread won't have to stop to see if they can run 
+( of course, they don't have to share data )
+
