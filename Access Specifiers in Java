@@ -1,0 +1,13 @@
+http://javarevisited.blogspot.sg/2011/10/class-in-java-programming-general.html
+
+Access level of class:
+
+Java class has mainly two type of access level:
+
+default: class objects are accessible only inside the package.
+
+public: class objects are accessible in code in any package.
+
+private: can only be accessed within that class. Not anywhere outside it
+
+protected: Can only be accessed within the class and all the classes which inherit this class.
