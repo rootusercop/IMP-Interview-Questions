@@ -6,3 +6,169 @@ will be blocked.
 Non-static synchronized methods synchronize on this ie the instance of the class. If one
 thread is executing a synchronized method, all other threads trying to execute any synchronized 
 methods will be blocked.
+
+Question: What is the difference between synchronized and static synchronized?
+Ans:
+
+BEST EXPLANATION:
+
+
+Trying to visualize and understand synchronization.
+
+What are the differences between using a static lock object (code A)
+and a non-static lock object (code B) for a synchronized block?
+How does it differ in practical applications?
+What are the pitfalls one would have that the other wouldn't?
+What are the criteria to determine which one to use?
+
+
+
+
+Code A
+
+public class MyClass1 {
+  private static final Object lock = new Object();
+  public MyClass1() {
+    //unsync
+    synchronized(lock) {
+      //sync
+    }
+    //unsync
+  }
+}
+
+
+
+Code B
+
+public class MyClass2 {
+  private final Object lock = new Object();
+  public MyClass2() {
+    //unsync
+    synchronized(lock) {
+      //sync
+    }
+    //unsync
+  }
+}
+Note
+
+The above code shows constructors, but you could talk about how the behavior is different
+in a static method and a non-static method too. Also, would it be advantageous to use a static
+lock when the synchronized block is modifying a static member variable?
+
+I already looked at answers in this question, but it's not clear enough what 
+the different usage scenarios are.
+
+
+ANS:
+The difference is simple: if the locked-on object is in a static field, 
+then all instances of MyClass* will share that lock
+(i.e. no two objects will be able to lock on that object at the same time).
+
+If the field is non-static, then each instance will have its own lock, 
+so only calls of the method on the same object will lock each other.
+
+When you use a static lock object:
+
+thread 1 calls o1.foo()
+thread 2 calls o1.foo(), will have to wait for thread 1 to finish
+thread 3 calls o2.foo(), will also have to wait for thread 1 (and probably 2) to finish
+
+
+When you use a non-static lock object:
+
+thread 1 calls o1.foo()
+thread 2 calls o1.foo(), will have to wait for thread 1 to finish
+thread 3 calls o2.foo(), it can just continue, not minding thread 1 and 2
+
+
+
+Which one of those you'll need depends on what kind of data you try to protect with your
+synchronized block.
+
+As a rule of thumb, you want the lock-object to have the same static-ness than the 
+operated-on value. So if you manipulate non-static values only, you'll want a
+non-static lock object. If you manipulate static values only, you'll want a static lock object.
+
+When you manipulate static and non-static values, then it'll become complicated.
+The easy way would be to just use a static lock object, but that might increase 
+the size of the synchronized-block more than absolutely necessary and might need to
+more lock contention than desired. In those cases you might need a combination of 
+static and non-static lock objects.
+
+In your particular case you use the lock in the constructor, which will only ever be
+executed once per instance, so a non-static lock-object doesn't make any sense here.
+
+
+
+
+
+
+ADDED EXPLANATION:
+
+The lock objects are different on the static method and non-static method. 
+The static method uses the Class object as the lock (lock obj: MyClass.class), while 
+the non-static method uses the instance object as the lock to which the invocation of the 
+method at that time is bound (lock obj: this).
+
+For those who are not familiar static synchronized method locked on class object e.g.
+for string class its String.class while instance synchronized method locks on current instance 
+of Object denoted by “this” keyword in Java. Since both of these object are different they have
+different lock so while one thread is executing static synchronized method , other thread in java 
+doesn’t need to wait for that thread to return instead it will acquire separate lock denoted
+byte .class literal and enter into static synchronized method. This is even a popular multi-threading
+interview questions where interviewer asked on which lock a particular method gets locked, some 
+time also appear in Java test papers.
+Source: http://javarevisited.blogspot.com/2012/03/mixing-static-and-non-static.html
+
+Source: http://stackoverflow.com/questions/1536064/what-is-the-difference-between-synchronized-and-static-synchronized
+
+The only difference that synchronized makes is that before the VM starts running that method, 
+it has to acquire a monitor. For an instance method, the lock acquired is the one associated 
+with the object you're calling the method on. For a static method, the lock acquired is associated 
+with the type itself - so no other threads will be able to call any other synchronized static methods
+at the same time.
+
+In other words, this:
+
+class Test
+{
+    static synchronized void Foo() { ... }
+
+    synchronized void Bar() { ... }
+}
+is roughly equivalent to:
+
+class Test
+{
+    static void Foo()
+    {
+        synchronized(Test.class)
+        {
+            ...
+        }
+    }
+
+    void Bar()
+    {
+        synchronized(this)
+        {
+            ...
+        }
+    }
+}
+Generally I tend not to use synchronized methods at all - I prefer to explicitly synchronize on a private lock reference:
+
+private final Object lock = new Object();
+
+...
+
+void Bar()
+{
+    synchronized(lock)
+    {
+        ...
+    }
+}
+You haven't provided nearly enough information to determine whether your method should be a static or instance method, or whether it should be synchronized at all. Multithreading is a complex issue - I strongly suggest that you read up on it (through books, tutorials etc).
