@@ -1,4 +1,4 @@
-Question: Can non-static member classes (Local classes) have static members?
+Question: Can non-static methods (Local classes) have static members?
 Ans: No, non-static member classes cannot have static members. Because,
 an instance of a non-static member class or local class must be
 created in the context of an instance of the enclosing class. You
