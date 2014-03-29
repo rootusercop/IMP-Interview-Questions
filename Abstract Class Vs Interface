@@ -4,16 +4,17 @@ b) All attributes(data members and not methods) are "public static final"
 3) All methods are "public abstract" (and not static and neither final)
 4) Each and every method dont have a defination
 5) Classes which implement the Interface have to define the abstract methods
+6) By default, all methods in an interface are decleared as public, abstract. It will never be static.
 
 
 Abstract Classes:
-a) Cannot be instantiated
-b) Methods can have defination. Some of the methods can be defined while some of the methods can be abstract.
+1) Cannot be instantiated
+2) Methods can have defination. Some of the methods can be defined while some of the methods can be abstract.
    However an abstract class can have NO abstract methods. Even if a class does not have abstract methods but 
    is declared as abstract is said to be an abstract class.
-c) We have to explicitly declare the abstract methods as "public abstract" so that they can be defined by the
+3) We have to explicitly declare the abstract methods as "public abstract" so that they can be defined by the
    classes which inherit the abstract class.
-d) Abstract classes fall in between "Interfaces" and proper actual defined "Classes" since they have both the
+4) Abstract classes fall in between "Interfaces" and proper actual defined "Classes" since they have both the
    properties.
-e) A normal class cannot have abstract methods. If a method in a normal class is declared as abstract, then the
+5) A normal class cannot have abstract methods. If a method in a normal class is declared as abstract, then the
    whole class has to be declared as abstract. Otherwise compilation and runtime error would take place.
