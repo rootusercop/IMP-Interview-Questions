@@ -1,0 +1,8 @@
+Question: What is the difference between static synchronized and synchronized methods?
+Ans: Static synchronized methods synchronize on the class object. If one thread is executing a
+static synchronized method, all other threads trying to execute any static synchronized methods 
+will be blocked.
+
+Non-static synchronized methods synchronize on this ie the instance of the class. If one
+thread is executing a synchronized method, all other threads trying to execute any synchronized 
+methods will be blocked.
