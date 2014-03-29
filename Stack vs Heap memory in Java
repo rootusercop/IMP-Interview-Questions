@@ -4,3 +4,45 @@ http://javarevisited.blogspot.com/2013/01/difference-between-stack-and-heap-java
 IMP Q: Does each thread in java uses seperate stack?
 Ans: In Java every thread maintains its own separate stack. It is called Runtime Stack but 
      they share the same memory.
+
+
+
+Difference between stack and heap memory is common programming question asked by beginners learning 
+Java or any other programming language. Stack and heap memory are two terms programmers starts hearing
+once they started programming but without any clear and definite explanation. Lack of knowledge on what
+is heap in Java and what is stack memory in Java, results in misconcepts related to stack and heap. 
+To add to this confusion, stack is also a data structure which is used to store elements in LIFO
+(Last In First out) order and available in Java API as java.util.Stack. In general both stack and heap
+are part of memory, a program is allocated and used for different purposes. Java program runs inside JVM 
+which is launched as a process by "java" command. Java also uses both stack and heap memory for 
+different needs. In our last article 10 points on Java heap space I have touched base on Java heap 
+space and in this article we will see difference between stack and heap memory in Java.
+
+Difference between Stack vs Heap in Java
+
+Difference between heap and statck in Java - Interview Question
+Here are few differences between stack and heap memory in Java:
+
+1) Main difference between heap and stack is that stack memory is used to store local variables 
+and function call, while heap memory is used to store objects in Java. No matter, where object is 
+created in code e.g. as member variable, local variable or class variable,  they are always created
+inside heap space in Java.
+
+2) Each Thread in Java has there own stack which can be specified using -Xss JVM parameter, similarly
+you can also specify heap size of Java program using JVM option -Xms and -Xmx where -Xms is starting
+size of heap and -Xmx is maximum size of java heap. to learn more about JVM options
+see my post 10 JVM option Java programmer should know.
+
+3) If there is no memory left in stack for storing function call or local variable, 
+JVM will throw java.lang.StackOverFlowError, while if there is no more heap space for creating object,
+JVM will throw java.lang.OutOfMemoryError: Java Heap Space. Read more about how to deal 
+with java.lang.OutOfMemoryError  in my post 2 ways to solve OutOfMemoryError in Java.
+
+4) If you are using Recursion, on which method calls itself, You can quickly fill up stack memory.
+Another difference between stack and heap is that size of stack memory is lot lesser than size of  
+heap memory in Java.
+
+5) Variables stored in stacks are only visible to the owner Thread, while objects created in 
+heap are visible to all thread. In other words stack memory is kind of private memory of Java Threads,
+while heap memory is shared among all threads.
+
