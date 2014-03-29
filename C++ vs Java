@@ -1,0 +1,25 @@
+Question: What are the differences between C++ and Java?
+Ans: 
+1) Java doesnot support pointers. Pointers are tricky to use and troublesome.
+
+2) Java does not support multiple inheritances because it causes more problems than it solves.
+Instead Java supports multiple interface inheritance, which allows an object to 
+inherit many method signatures from different interfaces with the condition
+that the inheriting object must implement those inherited methods. 
+The multiple interface inheritance also allows an object to behave polymorphically on those methods.
+
+3) Java does not include structures or unions.
+
+4) Java does not support destructors but adds a finalize() method. 
+Finalize methods are invoked by the garbage collector prior to reclaiming
+the memory occupied by the object, which has the finalize() method. 
+This means you do not know when the objects are going to be finalized. 
+Avoid using finalize() method to release non-memory resources like file 
+handles, sockets, database connections etc because Java has only a finite
+number of these resources and you do not know when the garbage collection is going to kick in
+to release these resources through the finalize() method.
+
+5) All the code in Java program is encapsulated within classes therefore Java does not have 
+global variables or functions.
+
+6) C++ requires explicit memory management, while Java includes automatic garbage collection.
