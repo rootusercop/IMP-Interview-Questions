@@ -1,0 +1,22 @@
+Question: Can non-static member classes (Local classes) have static members?
+Ans: No, non-static member classes cannot have static members. Because,
+an instance of a non-static member class or local class must be
+created in the context of an instance of the enclosing class. You
+can declare constants, means static final variables.
+
+Example:
+class Demo {
+public void hello(){
+ static int n=10;
+ System.out.println(n);
+ 
+}
+}
+class AbstractDemo{
+	public static void main(String[] args) {
+		Demo d=new Demo();
+    d.hello();
+	}
+}
+
+Output: Compilation Error: Non static method hello() cannot have static member n=10
