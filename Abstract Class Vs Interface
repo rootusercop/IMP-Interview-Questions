@@ -4,7 +4,7 @@ b) All attributes(data members and not methods) are "public static final"
 3) All methods are "public abstract" (and not static and neither final)
 4) Each and every method dont have a defination
 5) Classes which implement the Interface have to define the abstract methods
-6) By default, all methods in an interface are decleared as public, abstract. It will never be static.
+6) By default, ALL METHODS in an interface are decleared as public, abstract. It will never be static.
 
 
 Abstract Classes:
