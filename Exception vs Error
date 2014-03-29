@@ -1,0 +1,5 @@
+Question:  What is the difference between exception and error?
+Ans: An error is an irrecoverable condition occurring at runtime like out of
+memory error. These kind of jvm errors cannot be handled at runtime.
+Exceptions are because of condition failures, which can be handled
+easily at runtime.
