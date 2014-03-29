@@ -1,5 +1,9 @@
 Source-> http://javarevisited.blogspot.com/2012/04/difference-between-list-and-set-in-java.html
 
+ALL three Map,SET and LIST are interfaces in Java.
+http://docs.oracle.com/javase/7/docs/api/java/util/Map.html
+http://docs.oracle.com/javase/7/docs/api/java/util/Set.html
+http://docs.oracle.com/javase/7/docs/api/java/util/List.html
 
 Please Note: This is much better explanation than given in the link above.
 
