@@ -26,7 +26,7 @@ global variables or functions.
 
 
 
-TO REMEMBER: GG-MS-PD
+VERY IMPORTANT TO REMEMBER: GG-MS-PD
 G-> Global variables
 G-> Garbage Collection(required for memory management)
 M-> Multiple Inheritance
