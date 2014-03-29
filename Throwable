@@ -1,0 +1,2 @@
+Question: What is the super class for Exception(which is a class) and Error(which is a class)?
+Ans: The super class or base class for Exception and Error is Throwable(which is a class).
