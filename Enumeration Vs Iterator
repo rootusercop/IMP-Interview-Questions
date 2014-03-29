@@ -14,5 +14,5 @@ b) Method names have been improved.
 The Iterator interface is a member of the Java Collections Framework whereas the Enumeration interface is not.
 
 
-Please see Enumeration Java Docs -> http://docs.oracle.com/javase/6/docs/api/java/util/Enumeration.html
-Interface Java Docs -> http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html
+Please see Enumeration Interface Java Docs -> http://docs.oracle.com/javase/6/docs/api/java/util/Enumeration.html
+Iterator Interface Java Docs -> http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html
