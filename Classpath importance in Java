@@ -1,1 +1,46 @@
 http://javarevisited.blogspot.com/2011/01/how-classpath-work-in-java.html
+
+
+
+Other Importance of Classpath:
+
+1.      Classpath in Java is an environment variable used by Java Virtual machine to locate or find 
+class files in Java during class loading.
+
+2.      You can override value of Classpath in Java defined by environment variable CLASSPATH by providing
+JVM command line option –cp or –classpath while running your application.
+
+3.      If two classes with same name exist in Java Classpath then the class which comes earlier in
+Classpath will be picked by Java Virtual Machine.
+
+4.      By default CLASSPATH in Java points to current directory denoted by "." and it will look for
+any class only in current directory.
+
+5.      When you use the -jar command line  option to run your program as an executable JAR, then the
+Java CLASSPATH environment variable will be ignored, and also the -cp and -classpath switches will be ignored and In this case you can set your java classpath in the META-INF/MANIFEST.MF file by using the Class-Path attribute.
+
+6.      In Unix of Linux Java Classpath contains names of directory with colon “:” separated , On
+Windows Java Classpath will be  semi colon “;” separated while if you defined java classpath in Manifest
+file those will be space separated.
+
+7.       You can check value of classpath in java inside your application by looking at following
+system property “java.class.path”  System.getProperty("java.class.path")
+
+Class-Path attribute is used to contain classpath inside manifest file. Also make sure that your
+manifest file must end with a blank line (carriage return or new line) , here is an example of java 
+classpath in manifest file.
+
+Main-Class: com.classpathexample.Demo_Classpath
+Class-Path: lib/tibco.jar lib/log4j.jar
+
+8.       It’s also important to note that path specified in manifest file is not absolute instead 
+they are relative from application jar’s path. For example in above if your application jar file is 
+in C:\test directory you must need a lib directory inside test and tibco.jar and log4j.jar inside that.
+
+9.       ClassNotFoundException is an Exception and will be thrown when Java program dynamically tries
+to load a particular Class at Runtime and don’t find that on Java classpath due to result
+of Class.forName() or loadClass() method invocation.
+
+10. NoClassDefFoundError comes when a particular class was present in Java Classpath during
+compile time but not available during runtime on Classpath in Java.
+
