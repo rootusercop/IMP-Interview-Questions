@@ -1,1 +1,14 @@
 http://javarevisited.blogspot.com/2012/01/what-is-marker-interfaces-in-java-and.html
+
+Looking carefully on marker interface in Java e.g. Serializable, Clonnable and Remote it looks they
+are used to indicate something to compiler or JVM. So if JVM sees a Class is Serializable it done some
+special operation on it, similar way if JVM sees one Class is implement Clonnable it performs some operation
+to support cloning. Same is true for RMI and Remote interface. So in short Marker interface indicate, signal
+or a command to Compiler or JVM.
+
+In summary marker interface in Java is used to indicate something to compiler,
+JVM or any other tool but Annotation is better way of doing same thing.
+
+
+
+
