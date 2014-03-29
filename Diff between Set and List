@@ -5,20 +5,21 @@ Please Note: This is much better explanation than given in the link above.
 
 List vs Set in Java
 
-Difference between Set and List in Javahere are few note worthy differences between List and Set in Java.
-Remember that both of them are used to store objects and provides convenient API to insert, remove and
-retrieve elements, along with to support Iteration over collection.
+Difference between Set and List in Java:
+Here are few note worthy differences between List and Set in Java.
+Remember that both of them are used to store objects and provides convenient API(that means libraries)
+to insert, remove and retrieve elements, along with to support Iteration over collection.
 
 1) Fundamental difference between List and Set in Java is allowing duplicate elements. List in Java allows
 duplicates while Set doesn't allow any duplicate. If you insert duplicate in Set it will replace the older
-value. While if a duplicate is inserted in a List, it will be appended as the next element in the List.
-In case of duplicates in Map, if the keys are the same, the value of the latest will overwrite the value
-previously existed at that same key. (Remember, Map works on KEY-VALUE pairs)
+value with the new value. While if a duplicate is inserted in a List, it will be appended as the next 
+element in the List. In case of duplicates in Map, if the keys are the same(Remember, Map works on KEY-VALUE pairs),
+the value of the latest will overwrite the value previously existed at that same key(Remember, Map works on KEY-VALUE pairs).
 
 2) Another significant difference between List and Set in Java is order. List is an Ordered Collection while
-Set is an unordered Collection. List maintains insertion order of elements, means any element which is 
+Set is an unordered Collection. List maintains insertion order of elements(Example: ArrayList), means any element which is 
 inserted before will go on lower index than any element which is inserted after. Set in Java doesn't  
-maintain any order. Though Set provide another alternative called SortedSet which can store Set elements 
+maintain any order(Example: HashSet). Though Set provide another alternative called SortedSet which can store Set elements 
 in specific Sorting order defined by Comparable and Comparator methods of Objects stored in Set.
 
 3) Set uses equals() method to check uniqueness of elements stored in Set, while SortedSet uses compareTo()
