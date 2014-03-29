@@ -1,4 +1,17 @@
+Summary of Access Specifiers
 
+
+
+Access Modifiers
+
+
+              Same Class	Same Package	Subclass	Other packages
+public                 	Y	Y	Y	Y
+protected	        Y	Y	Y	N
+default         	Y	Y	N	N
+private	                Y	N	N	N
+
+Source of the above table: http://javapapers.com/core-java/access-modifiers-in-java-explain/
 
 Access level of class:
 
@@ -10,7 +23,8 @@ public: class objects are accessible in code in any package.
 
 private: can only be accessed within that class. Not anywhere outside it
 
-protected: Can be accessed within the class and all the classes which inherit this class and only within that package.
+protected: Can be accessed within the class and all the classes which inherit this class and only
+within that package.
 
 
 
@@ -21,7 +35,10 @@ Source: http://staff.science.uva.nl/~heck/JAVAcourse/ch4/ss2_2.html
 Access Specifiers
 
 
-One of the techniques in object-oriented programming is encapsulation. It concerns the hiding of data in a class and making this class available only through methods. In this way the chance of making accidental mistakes in changing values is minimized. Java allows you to control access to classes, methods, and fields via so-called access specifiers.
+One of the techniques in object-oriented programming is encapsulation. It concerns the hiding of 
+data in a class and making this class available only through methods. In this way the chance of 
+making accidental mistakes in changing values is minimized. Java allows you to control access to 
+classes, methods, and fields via so-called access specifiers.
 Java offers four access specifiers, listed below in decreasing accessibility:
 
 public
@@ -78,20 +95,20 @@ public class Square {   // public class
     return Point(x, y);
   }
 }
+
+
 Summary of Access Specifiers
 
-The following table summarizes the access level permitted by each specifier.
- Situation 	 public 	 protected 	 default 	 private 
- Accessible to class 
- from same package? 	yes	yes	yes	no
- Accessible to class 
- from different package? 	yes	 no, unless it is a subclass 	no	no
-Note the difference between the default access which is in fact more restricted than the 
-protected access. Without access specifier (the default choice), methods and variables are accessible
-only within the class that defines them and within classes that are part of the same package.
-They are not visible to subclasses unless these are in the same package. protected methods and 
-variables are visible to subclasses regardless of which package they are in.
 
+
+Access Modifiers
+
+
+              Same Class	Same Package	Subclass	Other packages
+public                 	Y	Y	Y	Y
+protected	        Y	Y	Y	N
+default         	Y	Y	N	N
+private	                Y	N	N	N
 
 
 
