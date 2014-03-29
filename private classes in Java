@@ -1,0 +1,4 @@
+Question: Can a class in java be private?
+Ans: We can not declare top level class(parent class) as private. Java allows
+only public and default modifier for top level classes(parent classes) in java.
+Inner classes can be private.
