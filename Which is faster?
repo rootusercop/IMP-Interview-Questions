@@ -1,0 +1,30 @@
+Question: Among StringBuilder and StringBuffer, which is faster and why?
+Ans: StringBuilder, because it is not synchronized hence no synchronization overhead and hence it is faster 
+than StringBuffer.StringBuffer is thread-safe and hence contains synchronized methods and hence the overhead 
+and therefore slower in execution than StringBuilder.
+
+Question: Which is faster, ArrayList or Vector and why?
+Ans: ArrayList, because it is not synchronized hence no synchronization overhead and hence it is faster 
+than Vector. Vector is thread-safe and hence contains synchronized methods and hence the overhead 
+and therefore slower in execution than ArrayList.
+
+
+Question: Are Synchronized Methods Slower In Single Threaded Applications also?
+Source: http://stackoverflow.com/questions/973518/are-synchronized-methods-slower-in-single-threaded-applications
+Ans: Yes, single-theaded Java programs that use synchronization may be slightly slower than they 
+would be without synchronization. For early Java releases, synchronization was expensive.
+For any modern release, however, uncontended synchronization is pretty cheap. I wouldn't worry about this.
+
+Note that Java 6 has and Java 7 is to have good optimizations around locking:
+
+Lock coarsening
+Lock elision
+Adaptive Spin locking
+Biased locking
+For more information, see the Java SE 6 Performance White Paper.
+Also note that uncontended synchronization appears to be more expensive on multi-core CPUs than
+on single-core CPUs, perhaps due to the Java Memory Model requirements of synchronization forcing local 
+CPU caches to be shared with other CPUs, or some other memory barrier. 
+For example, 
+read Do Java 6 threading optimizations actually work? - Part II.
+(The Part I was not as insightful as the Part II.)
