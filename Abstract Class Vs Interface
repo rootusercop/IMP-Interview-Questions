@@ -9,12 +9,25 @@ b) All attributes(data members and not methods) are "public static final"
 
 Abstract Classes:
 1) Cannot be instantiated
-2) Methods can have defination. Some of the methods can be defined while some of the methods can be abstract.
+2) We cannot create instance for an abstract class. We can able to create instance for its subclass only.
+   By specifying abstract keyword just before class, we can make a class as abstract class.
+     public abstract class MyAbstractClass{
+
+   } 
+3) Abstract class may or may not contains abstract methods. Abstract method is
+   just method signature, it does not containes any implementation. Its subclass
+   must provide implementation for abstract methods. Abstract methods are looks
+    like as given below:
+   
+   public abstract int getLength();
+   
+   
+4) Methods can have defination. Some of the methods can be defined while some of the methods can be abstract.
    However an abstract class can have NO abstract methods. Even if a class does not have abstract methods but 
    is declared as abstract is said to be an abstract class.
-3) We have to explicitly declare the abstract methods as "public abstract" so that they can be defined by the
+5) We have to explicitly declare the abstract methods as "public abstract" so that they can be defined by the
    classes which inherit the abstract class.
-4) Abstract classes fall in between "Interfaces" and proper actual defined "Classes" since they have both the
+6) Abstract classes fall in between "Interfaces" and proper actual defined "Classes" since they have both the
    properties.
-5) A normal class cannot have abstract methods. If a method in a normal class is declared as abstract, then the
+7) A normal class cannot have abstract methods. If a method in a normal class is declared as abstract, then the
    whole class has to be declared as abstract. Otherwise compilation and runtime error would take place.
