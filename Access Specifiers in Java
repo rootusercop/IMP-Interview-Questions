@@ -1,4 +1,4 @@
-http://javarevisited.blogspot.sg/2011/10/class-in-java-programming-general.html
+
 
 Access level of class:
 
@@ -10,4 +10,89 @@ public: class objects are accessible in code in any package.
 
 private: can only be accessed within that class. Not anywhere outside it
 
-protected: Can only be accessed within the class and all the classes which inherit this class.
+protected: Can be accessed within the class and all the classes which inherit this class and only within that package.
+
+
+
+Source: http://staff.science.uva.nl/~heck/JAVAcourse/ch4/ss2_2.html
+
+        http://javapapers.com/core-java/access-modifiers-in-java-explain/
+        
+Access Specifiers
+
+
+One of the techniques in object-oriented programming is encapsulation. It concerns the hiding of data in a class and making this class available only through methods. In this way the chance of making accidental mistakes in changing values is minimized. Java allows you to control access to classes, methods, and fields via so-called access specifiers.
+Java offers four access specifiers, listed below in decreasing accessibility:
+
+public
+protected
+default (no specifier)
+private
+We look at these access specifiers in more detail.
+public
+
+public classes, methods, and fields can be accessed from everywhere.
+The only constraint is that a file with Java source code can only contain one 
+public class whose name must also match with the filename. If it exists, this
+public class represents the application or the applet, in which case the public
+keyword is necessary to enable your Web browser or appletviewer to show the applet.
+You use public classes, methods, or fields only if you explicitly want to offer access
+to these entities and if this access cannot do any harm. An example of a square determined 
+by the position of its upper-left corner and its size:
+public class Square {  // public class
+  public x, y, size;   // public instance variables
+}
+protected
+
+protected methods and fields can only be accessed within the same class to which the methods and
+fields belong, within its subclasses, and within classes of the same package, but not from anywhere 
+else. You use the protected access level when it is appropriate for a class's subclasses to have access 
+to the method or field, but not for unrelated classes.
+default (no specifier)
+
+If you do not set access to specific level, then such a class, method, or field will be accessible
+from inside the same package to which the class, method, or field belongs, but not from outside this 
+package. This access-level is convenient if you are creating packages. For example, a geometry package 
+that contains Square and Tiling classes, may be easier and cleaner to implement if the coordinates of
+the upper-left corner of a Square are directly available to the Tiling class but not outside the 
+geometry package.
+private
+
+private methods and fields can only be accessed within the same class to which the methods and 
+fields belong. private methods and fields are not visible within subclasses and are not inherited
+by subclasses. So, the private access specifier is opposite to the public access specifier. 
+It is mostly used for encapsulation: data are hidden within the class and accessor methods are 
+provided. An example, in which the position of the upper-left corner of a square can be set or
+obtained by accessor methods, but individual coordinates are not accessible to the user.
+
+
+public class Square {   // public class
+  private double x, y   // private (encapsulated) instance variables
+
+  public setCorner(int x, int y) {  // setting values of private fields
+    this.x = x;
+    this.y = y;
+  }
+
+  public getCorner() {  // setting values of private fields
+    return Point(x, y);
+  }
+}
+Summary of Access Specifiers
+
+The following table summarizes the access level permitted by each specifier.
+ Situation 	 public 	 protected 	 default 	 private 
+ Accessible to class 
+ from same package? 	yes	yes	yes	no
+ Accessible to class 
+ from different package? 	yes	 no, unless it is a subclass 	no	no
+Note the difference between the default access which is in fact more restricted than the 
+protected access. Without access specifier (the default choice), methods and variables are accessible
+only within the class that defines them and within classes that are part of the same package.
+They are not visible to subclasses unless these are in the same package. protected methods and 
+variables are visible to subclasses regardless of which package they are in.
+
+
+
+
+
