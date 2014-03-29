@@ -1,0 +1,20 @@
+Question:  What is default value of a local variables?
+Ans: The local variables are not initialized to any default values. We should
+not use local variables with out initialization. Even the java compiler
+throws error.
+
+Example: 
+class AbstractDemo{
+	public static void main(String[] args) {
+		
+	    
+		me(10);
+	}
+	public static void me(int n)
+	{
+		int k;
+		System.out.println(k);
+	}
+}
+
+Output: Error: Local variable k not initialized
