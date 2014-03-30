@@ -38,4 +38,4 @@ Abstract Classes:(Methods: can or cannot be public abstract, Object cannot be cr
 6) Abstract classes fall in between "Interfaces" and proper actual defined "Classes" since they have both the
    properties.
 7) A normal class cannot have abstract methods. If a method in a normal class is declared as abstract, then the
-   whole class has to be declared as abstract. Otherwise compilation and runtime error would take place(VERY IMP POINT)
+   whole class has to be declared as abstract. Otherwise compilation and runtime error would take place(VERY IMPORTANT POINT).
