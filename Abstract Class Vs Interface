@@ -1,4 +1,4 @@
-Interfaces:
+Interfaces:(Datamembers: public static final, Methods: public abstract, Object cannot be created)
 a) Cannot be instantiated
 b) ALL datamembers(NOT METHODS) BUT NOT METHODS are "public static final"
 3) All methods are "public abstract" (AND THEY ARE NEITHER static NOR final SINCE THE CLASS IMPLEMENTING THIS
@@ -6,10 +6,11 @@ INTERFACE HAS TO COMPULSORILY DEFINE THE METHODS BY OVERRIDING THEM. HENCE THEY 
 BECAUSE STATIC OR/AND FINAL METHODS CANNOT BE OVERRIDDEN)
 4) Each and every method dont have a defination
 5) Classes which implement the Interface have to define the abstract methods
-6) By default, ALL METHODS in an interface are decleared as public, abstract. It will never be static.
+6) By default, ALL METHODS in an interface are decleared as public, abstract. It will never be static.(BECAUSE 
+STATIC METHODS CANNOT BE OVERRIDDEN)
 
 
-Abstract Classes:
+Abstract Classes:(Methods: can or cannot be public abstract, Object cannot be created)
 1) Cannot be instantiated
 2) We cannot create instance for an abstract class. We can able to create instance for its subclass only.
    By specifying abstract keyword just before class, we can make a class as abstract class.
