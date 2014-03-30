@@ -5,6 +5,11 @@ All these are 2 minute videos. Please watch all of them.
 
 VERY IMPORTANT CONCEPT ABOUT SYNCHRONIZATION:
 
+
+Whenever, we think about locks: just remember 2 things
+-> Lock at the CLASS LEVEL(static methods)
+-> Lock at the INSTANCE LEVEL (non-static methods)
+
 1) Consider two objects on a class. Both the objects belong to the SAME INSTANCE of the class.
 i.e. Animal a1=new Animal();
      Animal a2=a1;
@@ -28,10 +33,35 @@ i.e. Animal a1=new Animal();
        methods of the class can not be accessed by Thread2 even if object1 and object2 are different instance of
        the same class or same instances of the same class.
        This is because, even if a1 and a2 are different instances, but the STATIC keyword acquires lock at the
-       class level. Hence no other instances of the object can be allowed in STATIC SYNCHRONIZED methods.
+       class level. Hence no other instances of the object can be allowed in STATIC SYNCHRONIZED methods. 
+       But if Thread1 enters in STATIC SyNCHRONiZED methods(that is obtains lock for static synchronized methods)
+       then Thread2 which is another instance of the same class Animal can enter(that means obtain lock) for
+       STATIC NON-SYNCHRONIZED methods, NON-STATIC(that means INSTANCE) SYNCHRONIZED methods and 
+       NON-STATIC(in other words INSTANCE) NON-SYNCHRONIZED methods.
        
-Please remember every part of the above explanation. Each and every word in the above explanation is 
-VERY VERY IMPORTANT.
+
+Whenever, we think about locks: just remember 2 things
+-> Lock at the CLASS LEVEL(static methods)
+-> Lock at the INSTANCE LEVEL (non-static methods)
+       
+Please remember the following IMPORTANT things:
+1) A static(Lock is at the CLASS level) synchronized and non-static(Lock is at the instance level that is object level)
+will NOT-BLOCK each other EVER. The static methods locks on a CLASS level while the non-static methods 
+locks on a INSTANCE level also known as the Object level. These actions DONOT interfere with each other AT ALL.
+2) For synchronized blocks, we look at exactly what object has been used for locking. That is we look at the 
+parameters of the synchronized methods to check which object is used for locking. Threads that
+synchronize on the same objects(same instance of the same class) will BLOCK each other. 
+Threads that synchronize on different objects(different instance of the same class) will NOT-BLOCK each other.
+3) Methods that give up the locks are: only one methods in entire Java which is:
+wait() method defined in Object class.
+4) Methods thathold the locks are:
+notify() and notifyAll() -> These two methods belong to Object class
+join()  -> This method belongs to Thread class
+sleep()  -> This method belongs to Thread class
+yield()  -> This method belongs to Thread class
+
+Please remember every part of the above explanation. Each and every word from the start of the page to the
+end of the page is VERY VERY IMPORTANT.
 
 
 
@@ -41,3 +71,4 @@ Threads, synchronized methods and blocks and Lock -> 1) http://www.youtube.com/w
                                                      3) http://www.youtube.com/watch?v=NDw-KnRNPso
                                                      
 volatile keyword -> http://www.youtube.com/watch?v=7BShcgKkVAU
+
