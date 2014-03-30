@@ -3,7 +3,7 @@ a) Cannot be instantiated
 b) ALL datamembers BUT NOT METHODS are "public static final"
 3) All methods are "public abstract" (AND THEY ARE NEITHER static NOR final SINCE THE CLASS IMPLEMENTING THIS
 INTERFACE HAS TO COMPULSORILY DEFINE THE METHODS BY OVERRIDING THEM. HENCE THEY CANNOT BE STATIC NOR FINAL
-BECAUSE STATIC AND FINAL METHODS CANNOT BE OVERRIDDEN)
+BECAUSE STATIC OR/AND FINAL METHODS CANNOT BE OVERRIDDEN)
 4) Each and every method dont have a defination
 5) Classes which implement the Interface have to define the abstract methods
 6) By default, ALL METHODS in an interface are decleared as public, abstract. It will never be static.
