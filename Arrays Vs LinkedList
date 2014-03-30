@@ -53,9 +53,7 @@ Read more: http://javarevisited.blogspot.com/2013/07/difference-between-array-an
 
 It's easier to store data of different sizes in a linked list. An array assumes every element is
 exactly the same size.
-As you mentioned, it's easier for a linked list to grow organically. An array's size needs to be 
+As mentioned, it's easier for a linked list to grow organically. An array's size needs to be 
 known ahead of time, or re-created when it needs to grow.
 Shuffling a linked list is just a matter of changing what points to what. Shuffling an array is 
 more complicated and/or takes more memory.
-As long as your iterations all happen in a "foreach" context, you don't lose any performance in 
-iteration.
