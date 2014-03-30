@@ -1,7 +1,6 @@
 VERY IMPORTANT POINT:
 A normal class cannot have abstract methods. If a method in a normal class is declared as abstract, then the
-whole class has to be declared as abstract. Otherwise compilation and runtime error would take place(VERY IMP POINT)
-
+whole class has to be declared as abstract. Otherwise compilation and runtime error would take place.
 
 
 Interfaces:(Datamembers: public static final, Methods: public abstract, Object cannot be created)
