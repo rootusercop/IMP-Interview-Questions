@@ -1,0 +1,43 @@
+Please follow the below links of YouTube for the following:
+
+All these are 2 minute videos. Please watch all of them.
+
+
+VERY IMPORTANT CONCEPT ABOUT SYNCHRONIZATION:
+
+1) Consider two objects on a class. Both the objects belong to the SAME INSTANCE of the class.
+i.e. Animal a1=new Animal();
+     Animal a2=a1;
+     
+     Both objects a1 and a2 belong to the same instance of the Animal class.
+2) The class Animal contains 4 non-static synchronized methods, 4 static synchronized methods and 4 non-synchronized methods.
+3) If two threads are created such that Thread1 has object a1
+   and Thread2 has object a2.
+4) Then if Thread1 starts before Thread2. Then Thread1 will acquire locks for all the synchronized methods,
+   hence Thread2 cannot enter in any of the synchronized methods of the class, even if Thread 1 wants to 
+   execute in only 2 synchronized methods, but not all synchronized methods, but still all synchronized methods
+   will be locked by object a1 which belongs to Thread1. But Thread2 can enter in non-synchronized methods of the class.
+   Thread2 cannot enter in any of the synchronized methods of the class.
+5) But if a1 and a2 are different instances of the class Animal such that:
+   Animal a1=new Animal();
+   Animal a2=new Animal();
+       Thus, a1 and a2 are different instances of Animal class.
+       In this case, if Thread1 which has object a1 enters in one of the non-static synchronized methods of the
+       class, then the Thread2 which has object a2 can enter in other non-static synchronized methods of the class.
+       But, if Thread1 enters in static synchronized method of the class, then any of the other static synchronized
+       methods of the class can not be accessed by Thread2 even if object1 and object2 are different instance of
+       the same class or same instances of the same class.
+       This is because, even if a1 and a2 are different instances, but the STATIC keyword acquires lock at the
+       class level. Hence no other instances of the object can be allowed in STATIC SYNCHRONIZED methods.
+       
+Please remember every part of the above explanation. Each and every word in the above explanation is 
+VERY VERY IMPORTANT.
+
+
+
+
+Threads, synchronized methods and blocks and Lock -> 1) http://www.youtube.com/watch?v=yvLYSXi8U_g
+                                                     2) http://www.youtube.com/watch?v=b779xXBDC9w
+                                                     3) http://www.youtube.com/watch?v=NDw-KnRNPso
+                                                     
+volatile keyword -> http://www.youtube.com/watch?v=7BShcgKkVAU
