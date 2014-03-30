@@ -40,7 +40,7 @@ http://guide.couchdb.org/draft/btree.html
 
 Advantages of B and B+ Tress over Biary Search Trees:
 
-IMAGE of B+ Tree-> http://en.wikipedia.org/wiki/File:Bplustree.png
+(VERY IMPORTANT) IMAGE of B+ Tree-> http://en.wikipedia.org/wiki/File:Bplustree.png
 
 source -> http://stackoverflow.com/questions/15485220/advantage-of-b-trees-over-bsts
 The major advantage of the B+ tree (and B-trees in general) over binary search trees is
