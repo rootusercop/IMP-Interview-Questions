@@ -1,0 +1,36 @@
+This is the proof that the Set, Map and List can output all the elements in them using the toString() method
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+
+public class Demo {
+public static void main(String[] args) {
+	List<Integer> list=new ArrayList<Integer>();
+	Set<Integer> set=new HashSet<Integer>();
+	Map<Integer,Integer> map=new HashMap<Integer,Integer>();
+	for(int i=1;i<=10;i++){
+		list.add(i);
+		set.add(i);
+		map.put(i, i);
+	}
+	System.out.println(list.toString());
+	System.out.println(set.toString());
+	System.out.println(map.toString());
+	
+}
+}
+
+
+
+Output:
+
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]   // Output of list
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]   // Output of set
+{1=1, 2=2, 3=3, 4=4, 5=5, 6=6, 7=7, 8=8, 9=9, 10=10}    // Output of map
