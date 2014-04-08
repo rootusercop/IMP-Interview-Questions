@@ -1,4 +1,17 @@
-Best video of 6 minutes to explain this: https://www.youtube.com/watch?v=WTOiuY7cNTo
+Difference between heap and string pool memory: (Source: http://www.coderanch.com/t/390447/java/java/Difference-Heap-Pool)
+
+Heap:
+The heap is just the area of RAM that is allotted to the JVM by the operating system for runtime activity. 
+As such it is the place that objects get created during a JVM session. 
+
+Pool:
+The 'pool' is just a special area of memory that Java sets up to store all String literals.
+Imagine a box with a partition wall; on one side is the 'pool' on the other side the 'heap'. 
+Everytime you use a string literal, it gets stored on the pool side, regular objects get stored on
+the heap side.
+
+
+Best video of 6 minutes to explain difference between == and equals() : https://www.youtube.com/watch?v=WTOiuY7cNTo
 
 The == (double equals) returns true, if the variable reference points to the same object in memory. 
 This is called “shallow comparison”.
