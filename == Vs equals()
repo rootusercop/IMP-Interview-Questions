@@ -14,7 +14,7 @@ the heap side.
 
 Difference between HEAP memory and STACK memory
 All objects are stored on the heap(including their attributes) memory.
-Local variables(including arguments) always contain primitive values or references and are stored on the stack memory.
+Local variables of functions/methods(including arguments) always contain primitive values or references and are stored on the stack memory.
 
 Best video of 6 minutes to explain difference between == and equals() : https://www.youtube.com/watch?v=WTOiuY7cNTo
 
