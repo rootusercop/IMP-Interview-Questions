@@ -1,1 +1,12 @@
 Best video of 15 minutes to expain this: https://www.youtube.com/watch?v=Xy2PqCNgFig
+Another VERY IMP video: https://www.youtube.com/watch?v=qBRBAqA25o8
+
+Theory:
+Both interfaces support Generics.
+That is Comparable<Generic> and Comparator<Generic>
+
+Comparable<E> belongs to lang package
+Comparator<E> belongs to util package
+
+Comparable is used for natural ordering of Elements
+Comparator is used for other comparisons
