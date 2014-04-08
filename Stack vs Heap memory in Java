@@ -34,7 +34,7 @@ size of heap and -Xmx is maximum size of java heap. to learn more about JVM opti
 see my post 10 JVM option Java programmer should know.
 
 3) If there is no memory left in stack for storing function call or local variable, 
-JVM will throw java.lang.StackOverFlowError, while if there is no more heap space for creating object,
+JVM will throw java.lang.StackOverFlowError, while if there is no more heap memory for creating object,
 JVM will throw java.lang.OutOfMemoryError: Java Heap Space. Read more about how to deal 
 with java.lang.OutOfMemoryError  in my post 2 ways to solve OutOfMemoryError in Java.
 
