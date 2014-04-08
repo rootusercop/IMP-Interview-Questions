@@ -1,3 +1,5 @@
+Best video of 6 minutes to explain this: https://www.youtube.com/watch?v=WTOiuY7cNTo
+
 The == (double equals) returns true, if the variable reference points to the same object in memory. 
 This is called “shallow comparison”.
 
