@@ -1,0 +1,76 @@
+Java Freshers Top 75 Core Java Intervie Questions List Java Interview Questions
+
+1.Can Java thread object invoke start method "twice" ? 
+2.Give the list of Java Object class methods ?
+3.Can we call servlet destory() from service() ? 
+4.Can we override a static method ? 
+5.Can you list "Serialization" Interface methods ?
+6.What is the difference between super() and this() ? 
+7.How to prevent a method from being overridden ? 
+8.Can we create abstract classes without any abstract methods ? 
+9.Explain private,protected,public ? 
+10.Can we have static methods in interface ?
+11.What is transient variable ?
+12.Incase, there is a return at the end of try block, will execute finally block ? 
+13.What is abstract class or abstract method ?
+14.What is default value of a boolean ?
+15.When to use LinkedList or ArrayList ? 
+16.What is daemon thread ? 
+17.Does each thread in java uses seperate stack ? 
+18.What is the difference between Enumeration and Iterator ?
+19.Does system.exit() in try block executes finally block ? 
+20.What is fail-fast in Java ? Explain ? 
+21.What is final, finally and finalize ?
+22.In java, are true and false keywords ?
+23.What is the purpose of "Garbage Collection" ? 
+24.What are the types of ResultSet ?
+25.What is difference between "wait" and "sleep" methods in Java ? 
+26.What is servlet context ? 
+27.What happens if one of the members in a class does not implement Serializable interface ?
+28.What is race condition ? 
+29.How to get current time in milli seconds ?
+30.How can you convert Map to List ? 
+31.What is strictfp keyword ?
+32.What is System.out in Java ? 
+33.What is difference between ServletOuptputStream and PrintWriter ? 
+34.What is Java static import ? 
+35.When to use String and StringBuffer ? 
+36.What is difference between StringBuffer and StringBuilder ? 
+37.What is wrapper class in Java ? 
+38.Is Iterator a Class ? 
+39.What is Java classpath ? 
+40.Can a class in Java be marked as private ? 
+41.Is null a keyword in Java ? 
+42.What is the initial state of a thread when it is started ? 
+43.What is the super class for Exception and Error ?
+44.What is Class.forName() ? 45.Can interface be final ? 
+46.What is the difference between exception and error ?
+47.What is default value of a local variables ?
+48.What is local class in Java ? 
+49.Can we initialize uninitialized final variable ?
+50.Can we declare abstract method as final ?
+51.Can we have finally block without catch block ?
+52.What is pass by value and pass by reference ?
+53.Can we declare main method as private ? 
+54.What is the difference between preemptive scheduling and time slicing ?
+53.Can non-static member classes (Local classes) have static members ?
+54.What are the environment variables do we neet to set to run Java ?
+55.Can you serialize static fields of a class ? 
+56.What is the difference between declaring a variable and defining a variable ?
+57.Where can we use serialization ?
+58.What modifiers are allowed for methods in an Interface ?
+59.What is the purpose of Runtime and System class ? 
+60.Which one is faster ? ArrayList or Vector ? Why ? 
+61.What is the difference between "Static Synchronized" and "Synchronized" methods ?
+62.What is the order of catch blocks when catching more than one exception ? 
+63.What is the difference between the prefix and postfix forms of the increment(++) operator ? 
+64.What is hashCode ? 65.What is the difference between Hashtable and HashMap ?
+66.What are the restrictions when overriding a method ? 67.What is the use of assert keyword ? 
+68.What is difference between break, continue and return statements ? 
+69.What is the difference between while and do-while statements ?
+70.When does the compiler provides the default constructor ?
+71.How to create and start a thread in Java ? 
+72.Can I extend a "Final" class in Java ? 
+73.Explain "volatile" keyword in Java ?
+74.Can we catch "RuntimeException" ? What is "Checked" and "Unchecked" Exception ? 
+75.When to make a constructor "private" and why ?
