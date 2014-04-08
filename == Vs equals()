@@ -5,11 +5,16 @@ The heap is just the area of RAM that is allotted to the JVM by the operating sy
 As such it is the place that objects get created during a JVM session. 
 
 Pool:
-The 'pool' is just a special area of memory that Java sets up to store all String literals.
+Pool is a separate portion WITHIN the heap memory. This separate portion of heap memory is called "POOL"
+The 'pool' is just a special area of the heap memory that Java sets up to store all String literals.
 Imagine a box with a partition wall; on one side is the 'pool' on the other side the 'heap'. 
 Everytime you use a string literal, it gets stored on the pool side, regular objects get stored on
 the heap side.
 
+
+Difference between HEAP memory and STACK memory
+All objects are stored on the heap(including their attributes) memory.
+Local variables(including arguments) always contain primitive values or references and are stored on the stack memory.
 
 Best video of 6 minutes to explain difference between == and equals() : https://www.youtube.com/watch?v=WTOiuY7cNTo
 
