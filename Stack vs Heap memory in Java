@@ -39,7 +39,7 @@ JVM will throw java.lang.OutOfMemoryError: Java Heap Space. Read more about how 
 with java.lang.OutOfMemoryError  in my post 2 ways to solve OutOfMemoryError in Java.
 
 4) If you are using Recursion, on which method calls itself, You can quickly fill up stack memory.
-Another difference between stack and heap is that size of stack memory is lot lesser than size of  
+Another difference between stack and heap is that size of stack memory is VERY lesser(VERY LESS) than size of  
 heap memory in Java.
 
 5) Variables stored in stacks are only visible to the owner Thread, while objects created in 
