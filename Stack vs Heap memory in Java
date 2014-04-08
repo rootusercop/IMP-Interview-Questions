@@ -25,8 +25,8 @@ Here are few differences between stack and heap memory in Java:
 
 1) Main difference between heap and stack is that stack memory is used to store local variables 
 and function call, while heap memory is used to store objects in Java. No matter, where object is 
-created in code e.g. as member variable, local variable or class variable,  they are always created
-inside heap space in Java.
+created in code e.g. as member variable, local variable of any method either main method or different method
+or objects creates as a class variable,  they are always created inside heap space in Java.
 
 2) Each Thread in Java has there own stack which can be specified using -Xss JVM parameter, similarly
 you can also specify heap size of Java program using JVM option -Xms and -Xmx where -Xms is starting
