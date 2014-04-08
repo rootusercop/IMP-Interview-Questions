@@ -1,4 +1,5 @@
 Difference between heap and string pool memory: (Source: http://www.coderanch.com/t/390447/java/java/Difference-Heap-Pool)
+Video of 6 minutes to explain this: https://www.youtube.com/watch?v=WTOiuY7cNTo
 
 Heap:
 The heap is just the area of RAM that is allotted to the JVM by the operating system for runtime activity. 
