@@ -13,7 +13,7 @@ once they started programming but without any clear and definite explanation. La
 is heap in Java and what is stack memory in Java, results in misconcepts related to stack and heap. 
 To add to this confusion, stack is also a data structure which is used to store elements in LIFO
 (Last In First out) order and available in Java API as java.util.Stack. In general both stack and heap
-are part of memory, a program is allocated and used for different purposes. Java program runs inside JVM 
+are part of MAIN MEMORY, a program is allocated and used for different purposes. Java program runs inside JVM 
 which is launched as a process by "java" command. Java also uses both stack and heap memory for 
 different needs. In our last article 10 points on Java heap space I have touched base on Java heap 
 space and in this article we will see difference between stack and heap memory in Java.
