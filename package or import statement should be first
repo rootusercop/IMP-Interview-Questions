@@ -1,0 +1,51 @@
+Here's an example:
+If there is a package statement, that is the first line of your source code.
+
+
+
+package example;  
+   
+class ExampleClass{  
+   
+// class body goes here....  
+   
+}  
+
+
+If there is an import statement, then it should follow your package statement and all the imports should start before a class definition.
+
+
+package example;  
+   
+import java.util.Date;  
+import java.util.Collections;  
+   
+class ExampleClass{  
+   
+// class body goes here....  
+   
+}  
+
+If there is an import statement and no package statement, then the import statement would be your first statement of the source code.
+
+
+
+import java.util.Date;  
+   
+class ExampleClass{  
+   
+// class body goes here....  
+   
+}  
+
+If there is no package statement and there are no import statements, then obviously the class declaration would be the first line of your source code.
+
+
+class ExampleClass{  
+   
+// class body goes here....  
+   
+}  
+
+
+Hope this makes it clear!
