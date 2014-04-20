@@ -12,7 +12,7 @@ Comparable is used for natural ordering of Elements
 Comparator is used for other comparisons
 
 
-compareTo method of predefined String class returns the following:
+NOTE: compareTo() method of predefined String class returns the following:
 public class compare {
 public static void main(String[] args) {
 	String s1="Hello";
