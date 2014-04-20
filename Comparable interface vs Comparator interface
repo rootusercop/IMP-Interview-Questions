@@ -10,3 +10,15 @@ Comparator<E> belongs to util package
 
 Comparable is used for natural ordering of Elements
 Comparator is used for other comparisons
+
+
+compareTo method of predefined String class returns the following:
+public class compare {
+public static void main(String[] args) {
+	String s1="Hello";
+	String s2="World";
+	System.out.println(s1.compareTo(s2));
+}
+}
+
+O/P: -15
