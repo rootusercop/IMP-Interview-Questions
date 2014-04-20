@@ -5,7 +5,8 @@ In short:
 1) Requires more main memory
 2) Hashing algorithm does not result in spatial locality. Because hash tables cause
 access patterns that jump around, this can trigger microprocessor cache misses that cause long delays.
-3) Similar key types will result in more collision and hence the hashtable would be more like a linkedlist.
+3) Similar key types will result in more collision(LINEAR PROBING AND CHAINING IS THE APPROACH
+USED TO SOLVE COLLSION PROBLEM IN HASHMAP) and hence the hashtable would be more like a linkedlist.
 Collisions also ruin memory utilization- if I have 70 elements in 100 buckets, but those 70 elements hash to 
 only 4 buckets (and yes, Virginia, I’ve seen collision rates this bad), then 96 of my buckets aren’t doing
 me any good at, I’m just wasting that space.
