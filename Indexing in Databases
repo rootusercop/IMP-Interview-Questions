@@ -1,0 +1,12 @@
+Advantages:
+Searching (Retrieval) is faster as the data is sorted in that column so internally a Binary Search can 
+be used which reduces the time from O(N) i.e. linear learch to O(lg N) i.e. binary search.
+Hence searching/retrieving becomes faster(i.e. database is optimized)
+
+Disadvantage:
+1) Takes extra space
+2) Insertion, Updation and Deletion is slow since if tuples are inserted, updated or deleted then the indexes
+are also modified and reassigned every time for every insert/update/delete operation.
+
+Please watch the below video of 10 minutes carefully:
+https://www.youtube.com/watch?v=ow6eSj-dNKg
