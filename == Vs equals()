@@ -23,6 +23,19 @@ Best video of 6 minutes to explain difference between == and equals() : https://
 The == (double equals) returns true, if the variable reference points to the same object in memory. 
 This is called “shallow comparison”.
 
+The object class contains the equals() method. This equals() method is then implemented by String class,
+Double class, Long class, Integer class, Byte class, Integer class, Boolean class.
+The only thing to be noted is that the equals method is called using object and accepts a parameter which is
+an object. Hence the primitive types need to be converted to Objects using Wrapper classes to call the their
+respective equals() method.
+Object equals(Object o)
+return type and parameter, both are objects.
+
+If the equals method is passes with Object of Generic type, then it has to be implemented manually, so that
+it can override the equals() method of the object class. Otherwise if not implemented then, equals() method
+will work similar to == operator and will only compare reference(i.e. SHALLOW COMPARISON)
+
+
 The equals() method calls the user implemented equals() method, which compares the object attribute values. 
 The equals() method provides “deep comparison” by checking if two objects are logically equal as opposed to
 the shallow comparison provided by the operator ==.
