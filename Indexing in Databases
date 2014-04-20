@@ -5,8 +5,9 @@ Hence searching/retrieving becomes faster(i.e. database is optimized)
 
 Disadvantage:
 1) Takes extra space
-2) Insertion, Updation and Deletion is slow since if tuples are inserted, updated or deleted then the indexes
-are also modified and reassigned every time for every insert/update/delete operation.
+2) Insertion, Updation and Deletion is slow since if tuples are inserted, updated or deleted after 
+creating indexes then the indexes are also modified and reassigned every time for every insert/update/delete
+operation.
 
 Please watch the below video of 10 minutes carefully:
 https://www.youtube.com/watch?v=ow6eSj-dNKg
