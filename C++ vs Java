@@ -1,6 +1,7 @@
 Question: What are the differences between C++ and Java?
 Ans: 
 
+IMP POINT:
 Java is platform independant whereas c++ is platform dependant.(NOTE: Every different OS has a different JVM)
 Please watch this video to clear all doubts: https://www.youtube.com/watch?v=XjNwyXx2os8
 
