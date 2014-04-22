@@ -10,7 +10,7 @@ Watch the following videos for understanding MVC
 Model -> Also called as "the brain". This contains the bussiness logic. This layer also interacts with the
 Data-Access layer (also called as database) for retrieving User Query results(the different user queries are 
 provided by the Controller which interacts with User Input)
-View -> This is the front end or the part of the application visible to the user. Many views can be created
+View -> This is the front end(User Interface) or the part of the application visible to the user. Many views can be created
 for different users according to their priority and access levels
 Controller -> The Controller is responsible for handling user inputs. This is the part which takes input from
 the user and provides to the Model which gives query results to View so that the query results are visible
