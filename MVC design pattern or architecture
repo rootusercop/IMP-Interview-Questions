@@ -8,14 +8,14 @@ Watch the following videos for understanding MVC
 4 minute video: https://www.youtube.com/watch?v=YuqJcy6zCMU
 https://www.youtube.com/watch?v=eTdVkgF_Slo
 
-Model -> This layer handles the data.
+Model -> This layer handles the DATA.
 Also called as "the brain". This contains the bussiness logic. This layer also interacts with the
 Data-Access layer (also called as database) for retrieving User Query results(the different user queries are 
 provided by the Controller which interacts with User Input)
-View -> This layer handles the decisions.
+View -> This layer handles the DECISIONS.
 This is the front end(User Interface) or the part of the application visible to the user. Many views can be created
 for different users according to their priority and access levels
-Controller -> This layer handles the presentation.
+Controller -> This layer handles the PRESENTATION.
 The Controller is responsible for handling user inputs. This is the part which takes input from
 the user and provides to the Model which gives query results to View so that the query results are visible
 to the user.
