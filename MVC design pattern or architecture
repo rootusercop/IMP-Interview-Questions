@@ -22,11 +22,11 @@ the user and provides to the Model which gives query results to View so that the
 to the user.
 
 PLEASE NOTE:
-Controller is the middle layer between Model and View.
-Model and View donot talk to each other directly. They talk through the controller.
-Model can talk to Controller. View can talk to Controller. Controller can talk to both Model and View.
-To understand the above three lines, please watch the fourth video link mentioned above
+1) Controller is the middle layer between Model and View.
+2) Model and View donot talk to each other directly. They talk through the controller.
+3) Model can talk to Controller. View can talk to Controller. Controller can talk to both Model and View.
+4) To understand the above three lines, please watch the fourth video link mentioned above
 
 We can say that one of the COMMON flow in MVC architecture or design patttern is:
 Controller(take inputs from user) -> Model (communicate with database or data-access layer to provide query
-result) -> View (show the query results to the user)
+result) -> View (show the proper query results to the user)
