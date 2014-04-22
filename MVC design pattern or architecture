@@ -2,11 +2,11 @@ The MVC architecture or Design Patter is also called as "SEPARATION OF CONCERNS"
 
 
 
-Watch the following videos for understanding MVC
+Watch the following videos for understanding MVC. Please watch all the videos:
 
 4 minute video: https://www.youtube.com/watch?v=qXRcVhWxuaU
 4 minute video: https://www.youtube.com/watch?v=YuqJcy6zCMU
-https://www.youtube.com/watch?v=eTdVkgF_Slo
+4 minute video: https://www.youtube.com/watch?v=eTdVkgF_Slo
 
 Model -> This layer handles the DATA.
 Also called as "the brain". This contains the bussiness logic. This layer also interacts with the
