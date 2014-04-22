@@ -1,0 +1,10 @@
+The following methods can be used to make sure that the code is readable and understood by everyone who will
+follow you:
+1) Put COMMENTS on important functions on how they behave
+2) Strong DOCUMENTATION for every function implemented properly
+3) Using MEANINGFUL NAMES for variables and object names so that they can be understood properly
+Example: Animal i =new Animal(); // instead of using i variable we can use
+         Animal animalInstance = new Animal();
+4) Using the SAME STYLE of writing the code as used by the entire team, so that other members can understand
+your code that is written.
+
