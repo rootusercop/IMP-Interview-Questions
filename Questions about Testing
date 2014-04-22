@@ -1,0 +1,21 @@
+How dou you do testing?
+
+Ans Talk about Unit testing
+
+In Java we have JUnit for unit testing (using assert to check the code).
+Learn more about Unit testing from the following code of Wikipedia.
+http://en.wikipedia.org/wiki/Unit_testing
+
+
+In testing we touch upon the following:
+Black box(checks the behaviour of the code) and White box testing(checks the actual code)
+
+Check whether the application written is:
+1) Compatible with all enviornments on which it is going to run
+2) If its a web application it should be able to run on multiple browsers(Using JQuery we can achieve this)
+3) Check which resources it will require to function properly(for example: Main memory, hard disk space and 
+CPU specifications)
+4) If its a web application, check its behaviour in flickering internet connection(throw appropriate 
+messages to the User that the internet connection is unstable so that the user is aware of the exact problem)
+
+
