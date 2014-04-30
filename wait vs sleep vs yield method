@@ -1,4 +1,3 @@
-
 wait() is called in a synchronized method in java. This is what happens when synchronized methods are used in 
 Java. (i.e. wait() and notify() methods are used by the threads)
 
@@ -26,3 +25,6 @@ the OS and back, aren’t free). Measure and test against goals you care about, 
 
 
 Source: http://www.logicaltrinkets.com/wordpress/?p=153
+
+
+How does locks work in Java explained: http://stackoverflow.com/questions/17368595/java-lock-concept-how-internally-works
