@@ -1,3 +1,8 @@
+
+wait() is called in a synchronized method in java. This is what happens when synchronized methods are used in 
+Java. (i.e. wait() and notify() methods are used by the threads)
+
+
 It all eventually makes its way down to the OS’s scheduler, which hands out timeslices to processes 
 and threads.
 
