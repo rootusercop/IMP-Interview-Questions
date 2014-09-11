@@ -2,7 +2,13 @@ Source -> http://javarevisited.blogspot.com/2013/07/difference-between-array-and
        -> http://stackoverflow.com/questions/166884/array-vs-linked-list
 
 
-Array vs linked list in Java
+Array vs linked list in Java ( CRF
+C - Contigugous memory bock
+R - Random Access
+F - Fixed Length
+F - Fast caches
+I/D - Insert and Delete operations
+D - Single or Multidimensional )
 
 array vs linked list in JavaHere is my list of differences between array and linked list. 
 Though data structure concept are independent of any programming language and more or less 
