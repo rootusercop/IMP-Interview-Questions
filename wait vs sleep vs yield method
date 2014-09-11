@@ -23,7 +23,7 @@ You rarely need yield(), but if you have a compute-heavy app with logical task b
 a yield() might improve system responsiveness (at the expense of time — context switches, even just to 
 the OS and back, aren’t free). Measure and test against goals you care about, as always.
 
-
+State diagram of thread states -> http://codexplo.wordpress.com/2012/10/20/state-diagram-of-java-thread/
 Source: http://www.logicaltrinkets.com/wordpress/?p=153
 
 
