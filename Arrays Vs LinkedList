@@ -56,6 +56,9 @@ fundamental data structure is essential to do well in programming jobs.
 
 
 Read more: http://javarevisited.blogspot.com/2013/07/difference-between-array-and-linked-list-java.html#ixzz2qGX08GX3
+(S - Store elements
+G - Grow organically
+S - Shuffling)
 
 It's easier to store data of different sizes in a linked list. An array assumes every element is
 exactly the same size.
