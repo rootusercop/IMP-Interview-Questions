@@ -3,3 +3,20 @@ the best way possible.
 
 
 https://www.youtube.com/watch?v=Qt_XFk6PR_M
+
+Also one more thing to note:
+Dynamic versus Static Polymorphism
+
+    Polymorphism implemented via inheritance is bounded and dynamic:
+
+        - Bounded means that the interfaces of the types participating in the polymorphic behavior are predetermined by the design of the common base class (other terms for this concept are invasive or intrusive).
+
+        - Dynamic means that the binding of the interfaces is done at run time (dynamically).
+
+    Polymorphism implemented via templates is unbounded and static:
+
+    - Unbounded means that the interfaces of the types participating in the polymorphic behavior are not predetermined (other terms for this concept are noninvasive or nonintrusive).
+
+    - Static means that the binding of the interfaces is done at compile time (statically).
+  
+  Source -> http://codeidol.com/community/cpp/dynamic-versus-static-polymorphism/21762/
