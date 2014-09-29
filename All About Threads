@@ -1,5 +1,8 @@
 http://java-questions.com/Threads_interview_questions.html
 
+Why creating threads through Runnable interface is preferred as compared to craeting threads through Thread class ->
+http://stackoverflow.com/questions/15471432/why-implements-runnable-is-preferred-over-extends-thread
+http://stackoverflow.com/questions/541487/implements-runnable-vs-extends-thread
 
 Difference between Thread and Cores of a CPU(processor)
 http://www.tomshardware.com/forum/306079-28-what-core-thread
