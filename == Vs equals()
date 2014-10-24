@@ -35,8 +35,9 @@ Object equals(Object o)
 return type and parameter, both are objects.
 
 Best explantion for difference between == and equals(). It also explains the
-difference between equals method of Object class and equals method of String class--> http://stackoverflow.com/questions/16089282/how-equals-method-works
-
+difference between equals method of Object class and equals method of String class
+1) --> http://stackoverflow.com/questions/16089282/how-equals-method-works
+2) -->http://howtodoinjava.com/2012/10/09/working-with-hashcode-and-equals-methods-in-java/
 
 If the equals method is passes with Object of Generic type, then it has to be implemented manually, so that
 it can override the equals() method of the object class. Otherwise if not implemented then, equals() method
