@@ -35,7 +35,10 @@ Object equals(Object o)
 return type and parameter, both are objects.
 
 Best explantion for difference between == and equals(). It also explains the
-difference between equals method of Object class and equals method of String class
+difference between equals method of Object class and equals method of String class. It also explains the
+difference between hashcode method of Object class and hashcode method of String class. Similarly Integer, Byte and other wrapper
+classes have their own different version of hashcode and equals method. If they are not invoked then the default implementation
+of hashcode and equals method mentioned in the Object class is invoked.
 1) --> http://stackoverflow.com/questions/16089282/how-equals-method-works
 2) -->http://howtodoinjava.com/2012/10/09/working-with-hashcode-and-equals-methods-in-java/
 
