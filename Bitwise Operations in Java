@@ -1,1 +1,3 @@
 http://www.fredosaurus.com/notes-java/data/expressions/bitops.html
+Examples -> http://www.erpgreat.com/java/java-bitwise-shift-operators.htm
+Specifically look for use of >>> bitwise operator in the above example
