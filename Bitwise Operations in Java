@@ -1,3 +1,19 @@
 http://www.fredosaurus.com/notes-java/data/expressions/bitops.html
 Examples -> http://www.erpgreat.com/java/java-bitwise-shift-operators.htm
-Specifically look for use of >>> bitwise operator in the above example
+-> http://stackoverflow.com/questions/16763917/what-is-the-purpose-of-the-unsigned-right-shift-operator-in-java
+NOTE: Specifically look for use of >>> bitwise operator in the above example
+
+
+UNSIGNED RIGHT SHIFT OPERATOR (>>>):
+A normal right shift >> of a negative number will keep it negative. I.e. the sign bit will be retained.
+
+An unsigned right shift >>> will shift the sign bit too, replacing it with a zero bit.
+
+There is no need to have the equivalent left shift because there is only one sign bit and it is the leftmost bit so it only interferes when shifting right.
+
+Essentially, the difference is that one preserves the sign bit, the other shifts in zeros to replace the sign bit.
+
+For positive numbers they act identically.
+
+For an example of using both >> and >>> see BigInteger shiftRight.
+
