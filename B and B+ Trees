@@ -7,7 +7,7 @@ Difference between B+ and B Trees:
 
 
 PLEASE NOT THAT:
-1) B-Trees and B+ Trees are NOT-BINARY(having 2 children) TREES, 
+1) B-Trees and B+ Trees are NOT-BINARY(having 2 children) TREES, [B stands for BALANCED]
    they are Multiway(M-way, that is having M children) Trees.
 2) Both B and B+ trees are SEARCH(that is left is less than right) Trees.
 
