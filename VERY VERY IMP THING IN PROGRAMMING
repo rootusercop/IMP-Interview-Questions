@@ -1,0 +1,52 @@
+Question: https://www.hackerrank.com/challenges/halloween-party
+Ans:
+WRONG ANS:
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        in.nextLine();
+        for(int i=0;i<n;i++){
+            int k = in.nextInt();
+            long ans = 0;
+            ans = (k/2)*(k-(k/2));
+            System.out.println(ans);
+            if(i!=n-1)
+            in.nextLine();
+        }
+    }
+}
+
+CORRECT ANS:
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        in.nextLine();
+        for(int i=0;i<n;i++){
+            int k = in.nextInt();
+            long ans = 0;
+            ans = (long)(k/2)*(k-(k/2));        // When we store the answer in different datatype, always remember to typecast it
+            System.out.println(ans);
+            if(i!=n-1)
+            in.nextLine();
+        }
+    }
+}
