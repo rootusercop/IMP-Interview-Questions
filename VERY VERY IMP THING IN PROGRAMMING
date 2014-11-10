@@ -1,5 +1,8 @@
 Question: https://www.hackerrank.com/challenges/halloween-party
 Ans:
+ When we store the answer in different datatype, always remember to typecast it
+
+
 WRONG ANS:
 
 import java.io.*;
