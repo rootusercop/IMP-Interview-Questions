@@ -1,0 +1,48 @@
+LOGIC:
+Store the character count in an array of length 26. Loop through all the counts, to find if the odd occurence is greater
+than 1. Ideally if palindrome exists in then, the total odd occurences would be 0 or 1. Find this, using your own
+examples. Work with your own examples.
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner myScan = new Scanner(System.in);
+        String inputString = myScan.nextLine();
+       
+        String ans="";
+        boolean got = checkPalindrome(inputString);
+        if(got==true)
+            ans="YES";
+        else
+            ans="NO";
+        // Assign ans a value of YES or NO, depending on whether or not inputString satisfies the required condition
+        System.out.println(ans);
+        myScan.close();
+    }
+     public static boolean checkPalindrome(String input)
+{
+int [] count = new int[26];
+for( int i = 0; i < input.length(); i++ )
+{
+char ch = input.charAt(i);
+count[ch-'a']++;
+}
+int oddOccur = 0;
+for( int cnt:count )
+{
+if( oddOccur > 1)
+return false;
+if( cnt%2 == 1 )
+oddOccur++;
+}
+return true;
+}
+}
