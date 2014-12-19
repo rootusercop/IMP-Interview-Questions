@@ -16,4 +16,4 @@ Examples of Greedy:
 1. Dijkstra's algorithm for Shortest Path Calculation
 2. Prim's Algorithm to find Minimum Spanning Tree
 3. Kruskal's Algorithm to find Minimum Spanning Tree
-(Difference between Prims and Kruskals Algorithm: http://stackoverflow.com/questions/13538459/difference-between-divide-and-conquer-algo-and-dynamic-programming)
+(Difference between Prims and Kruskals Algorithm: http://www.quora.com/What-is-the-difference-in-Kruskals-and-Prims-algorithm)
