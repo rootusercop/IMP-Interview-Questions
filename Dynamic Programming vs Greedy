@@ -4,3 +4,15 @@ http://stackoverflow.com/questions/13713572/how-is-dynamic-programming-different
 
 Divide & Conquer vs DP vs Gredy: http://stackoverflow.com/questions/6162465/divide-and-conquer-dynamic-programming-and-greedy-algorithms
 Divide & Conquer vs DP: http://stackoverflow.com/questions/13538459/difference-between-divide-and-conquer-algo-and-dynamic-programming
+
+Examples of Divide & Conquer:
+1. MergeSort
+2. QuickSort
+
+Examples of Dynamic Programming:
+1. BellmanFord Algorithm for Shortest Path Calculation
+
+Examples of Greedy:
+1. Dijkstra's algorithm for Shortest Path Calculation
+2. Prim's Algorithm to find Minimum Spanning Tree
+3. Kruskal's Algorithm to find Minimum Spanning Tree
