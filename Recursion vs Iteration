@@ -1,2 +1,5 @@
 What does recursion do ? And if given a choice between recursion and iteration, why should one choose iteration over recursion ?
 Ans: http://stackoverflow.com/questions/3021/what-is-recursion-and-when-should-i-use-it
+Recursion is a method of solving problems based on the divide and conquer mentality. 
+The basic idea is that you take the original problem and divide it into smaller (more easily solved) instances of itself,
+solve those smaller instances (usually by using the same algorithm again) and then reassemble them into the final solution.
