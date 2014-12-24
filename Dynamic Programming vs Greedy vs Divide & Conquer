@@ -21,7 +21,11 @@ Examples of Greedy:
 2. Prim's Algorithm to find Minimum Spanning Tree
 3. Kruskal's Algorithm to find Minimum Spanning Tree
 (Difference between Prims and Kruskals Algorithm: http://www.quora.com/What-is-the-difference-in-Kruskals-and-Prims-algorithm)
-Q: Given the differences, how is Kruskal's algorithm considered as a greedy approach ?
+Q: Given the above differences, how is Kruskal's algorithm considered as a greedy approach ?
+[It is said that Kruskal's algorithm for MST construction is greedy, but the algorithm chooses global minimum and 
+instead of local minimum unlike Prim's algorithm. Can someone explain how Kruskal's algorithm 
+is considered a greedy approach ?] 
+Source: http://stackoverflow.com/questions/27639942/how-is-kruskals-algorithm-greedy/27640057#27640057
 Ans: In Kruskal's algorithm, we sort all the edges in the graph and iteratively choose minimum edge during each iteration
 to check whether it can be added to the MST (doesn't form cycle).
 Thus, once an edge is selected and added in the MST, no further changes are made during the remaining other iterations.
