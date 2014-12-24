@@ -20,3 +20,5 @@ Examples of Greedy:
 2. Prim's Algorithm to find Minimum Spanning Tree
 3. Kruskal's Algorithm to find Minimum Spanning Tree
 (Difference between Prims and Kruskals Algorithm: http://www.quora.com/What-is-the-difference-in-Kruskals-and-Prims-algorithm)
+Given the differences, how is Kruskal's algorithm considered as a greedy approach ?
+Ans. TODO
