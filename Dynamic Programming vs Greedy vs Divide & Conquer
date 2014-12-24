@@ -14,7 +14,9 @@ SORTING ALGORITHMS:
 
 Examples of Dynamic Programming:
 1. BellmanFord Algorithm for Single Source Shortest Path Calculation(It gives path from single source to all the other nodes)
+[Youtube Video: https://www.youtube.com/watch?v=iTW2yFYd1Nc&list=PLATr4Ip40BjYUgHgTKe5ZJ_hl-ccCeAai]
 2. Floyd Warshall Algorithm for All Pair Shorted Path Calculation(It gives path from all nodes to all other nodes)
+[Youtube Video: https://www.youtube.com/watch?v=odeFemb3o-o]
 
 Examples of Greedy:
 1. Dijkstra's algorithm for Single Source Shortest Path Calculation(It gives path from single source to a single destination node)
