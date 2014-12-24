@@ -35,5 +35,6 @@ shortest path. Thus, here we are modifying the previous results and taking into 
 that is the shortest paths from all the nodes (since no of iterations = (no of nodes in graph) - 1).
 
 This, is the reason why Bellman Ford is Dynamic and Kruskal's is Greedy
-
-
+[NOTE: Though Bellman Ford is for Single Source Shortest Path and Kruskal's is for MST, hence once might consider that
+these two cannot be compared together, though concentrate that the solution is not compared but the approach of algorithm
+is compared to understand difference between DYNAMIC vs GREEDY]
