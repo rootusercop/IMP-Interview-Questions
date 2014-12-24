@@ -6,6 +6,9 @@ Divide & Conquer vs DP vs Gredy: http://stackoverflow.com/questions/6162465/divi
 Divide & Conquer vs DP: http://stackoverflow.com/questions/13538459/difference-between-divide-and-conquer-algo-and-dynamic-programming
 
 Examples of Divide & Conquer:
+SEARCHING ALGORITHM:
+1.Binary Search
+SORTING ALGORITHMS:
 1. MergeSort
 2. QuickSort
 
