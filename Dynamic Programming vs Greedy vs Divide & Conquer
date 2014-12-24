@@ -14,6 +14,7 @@ SORTING ALGORITHMS:
 
 Examples of Dynamic Programming:
 1. BellmanFord Algorithm for Shortest Path Calculation
+2. Floyd Warshall Algorithm
 
 Examples of Greedy:
 1. Dijkstra's algorithm for Shortest Path Calculation
