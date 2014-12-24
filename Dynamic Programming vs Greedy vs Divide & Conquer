@@ -21,5 +21,15 @@ Examples of Greedy:
 2. Prim's Algorithm to find Minimum Spanning Tree
 3. Kruskal's Algorithm to find Minimum Spanning Tree
 (Difference between Prims and Kruskals Algorithm: http://www.quora.com/What-is-the-difference-in-Kruskals-and-Prims-algorithm)
-Given the differences, how is Kruskal's algorithm considered as a greedy approach ?
-Ans. TODO
+Q: Given the differences, how is Kruskal's algorithm considered as a greedy approach ?
+Ans: In Kruskal's algorithm, we sort all the edges in the graph and iteratively choose minimum edge during each iteration
+to check whether it can be added to the MST (doesn't form cycle).
+Thus, once an edge is selected and added in the MST, no further changes are made during the remaining other iterations.
+If you compare this with Bellman-Ford algorithm for Shortest Path, during each iteration we get the shortest path, and during 
+other remaining iterations we check to see if there are any shortest paths that can replace the previously calculated
+shortest path. Thus, here we are modifying the previous results and taking into consideration the results of all iterations,
+that is the shortest paths from all the nodes (since no of iterations = (no of nodes in graph) - 1).
+
+This, is the reason why Bellman Ford is Dynamic and Kruskal's is Greedy
+
+
