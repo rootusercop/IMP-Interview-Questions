@@ -13,11 +13,11 @@ SORTING ALGORITHMS:
 2. QuickSort
 
 Examples of Dynamic Programming:
-1. BellmanFord Algorithm for Shortest Path Calculation
-2. Floyd Warshall Algorithm
+1. BellmanFord Algorithm for Single Source Shortest Path Calculation(It gives path from single source to all the other nodes)
+2. Floyd Warshall Algorithm for All Pair Shorted Path Calculation(It gives path from all nodes to all other nodes)
 
 Examples of Greedy:
-1. Dijkstra's algorithm for Shortest Path Calculation
+1. Dijkstra's algorithm for Single Source Shortest Path Calculation(It gives path from single source to a single destination node)
 2. Prim's Algorithm to find Minimum Spanning Tree
 3. Kruskal's Algorithm to find Minimum Spanning Tree
 (Difference between Prims and Kruskals Algorithm: http://www.quora.com/What-is-the-difference-in-Kruskals-and-Prims-algorithm)
