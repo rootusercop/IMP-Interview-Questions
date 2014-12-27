@@ -9,10 +9,8 @@ The following program clearly displays 2 things.
 1. 'return null' is invalid for primitive datatypes.
 2. 'string' does not exist. But 'String' wrapper class exist. This means that 'string' is not primitive datatype in Java.
 
-
-
+Program:
 package forTesting;
-
 import java.util.List;
 
 public class CheckingNullForAllReturnTypes {
@@ -42,7 +40,7 @@ public static Object returnObject(){
 	return null;                            // CAN RETURN NULL for return type of complex datatype such as Object
 }
 public static String returnString(){
-	return null;                        // CAN RETURN NULL for complex DS such as String, since there is no such thing called 'string'
+	return null;                        // CAN RETURN NULL for Wrapper class such as String, since there is no such thing called 'string'
 										// The primitive datatype of String is 'char' and NOT 'string'
 }
 
@@ -73,9 +71,3 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 	at forTesting.CheckingNullForAllReturnTypes.returndouble(CheckingNullForAllReturnTypes.java:36)
 	at forTesting.CheckingNullForAllReturnTypes.main(CheckingNullForAllReturnTypes.java:13)
 */
- 
-
-
-
-
-
