@@ -39,6 +39,7 @@ Boolean -> compare(boolean x, boolean y) , compareTo(Boolean b)
 String -> compareTo(String anotherString) , compareToIgnoreCase(String str)  "In String, both compare and
 compareTo methods have String objects"
 
+IMP: All the wrapper classes have compareTo() method. Only Byte and String does not have compare() method
 
 Please NOTE: 
 1) (VERY IMP) If we declare or initialize a string with small "s", it will give compilation ERROR.
