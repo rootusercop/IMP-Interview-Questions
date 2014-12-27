@@ -50,7 +50,7 @@ public static double returndouble(){
 /*ANOTHER IMPORTANT THING:
  * public static string returnstring(){ // Throws ERROR, since there is no such thing called as 'string'
 	// since 'string' is not Primitive datatype. 'String' exists which is Wrapper class
-	// and not 'string'. The primitive type of 'String' can be said to be 'char'.
+	// and not 'string'. The primitive type of 'String' Wrapper Class can be said to be 'char'.
 	// Also the primitive type of 'Character' wrapper class is also 'char'
 return null;
 }*/
