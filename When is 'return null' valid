@@ -4,10 +4,12 @@ Answer:
 1. Valid: "return null;" is valid only for complex datatypes and complex datastructures such as Wrapper Classes, 
 Object, List, Arrays etc.
 2. Invalid: "return null;" is invalid for Primitive datatypes such as int,double,char.
+3. If the return type is void, the instead of 'return null;' we should always write 'return;'. Otherwise ERROR will be thrown.
 
 The following program clearly displays 2 things.
 1. 'return null' is invalid for primitive datatypes.
 2. 'string' does not exist. But 'String' wrapper class exist. This means that 'string' is not primitive datatype in Java.
+3. If the return type is void, the instead of 'return null;' we should always write 'return;'. Otherwise ERROR will be thrown.
 
 Program:
 package forTesting;
@@ -53,7 +55,16 @@ public static double returndouble(){
 	// and not 'string'. The primitive type of 'String' Wrapper Class can be said to be 'char'.
 	// Also the primitive type of 'Character' wrapper class is also 'char'
 return null;
-}*/
+}
+ONE MORE IMP THING:
+public static void returnVoid(){
+	return null;                   // This gives ERROR since the return type is void
+}
+
+public static void returnVoid(){
+	return;                   // This DOES NOT gives ERROR since the return type is void
+}
+*/
 }
 
 /*
