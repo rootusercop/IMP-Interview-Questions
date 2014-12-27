@@ -1,0 +1,53 @@
+There are eight primitive types in Java. Since Java still has these primitive types, hence it cannot be said that 
+Java is PURE OBJECT ORIENTED LANGUEAGE. Hence Java is said to be OBJECT ORIENTED but NOT PURE OBJECT ORIENTED
+LANGUAGE.
+
+The eight primitive types are:
+(Source: http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+char
+byte
+short
+int
+long
+float
+double
+boolean
+
+Whereas the following are the datatypes in Java:
+String (Please note that in String S is capital)
+char
+byte
+short
+int
+long
+float
+double
+boolean
+
+Every primitive type has its own wrapper class and their respective important methods used while 
+implementing Comparator or Comparable interface are:
+
+
+Character -> compare(char x, char y) , compareTo(Character anotherCharacter) "compareTo compares Character objects" 
+Byte -> compareTo(Byte anotherByte) "Byte wrapper class does not have compare method"
+Short -> compare(short x, short y) , compareTo(Short anotherShort)
+Integer -> compare(int x, int y) , compareTo(Integer anotherInteger)
+Long -> compare(long x, long y) , compareTo(Long anotherLong)
+Float -> compare(float f1, float f2) , compareTo(Float anotherFloat)
+Double -> compare(double d1, double d2) , compareTo(Double anotherDouble)  
+Boolean -> compare(boolean x, boolean y) , compareTo(Boolean b)
+String -> compareTo(String anotherString) , compareToIgnoreCase(String str)  "In String, both compare and
+compareTo methods have String objects"
+
+
+Please NOTE: 
+1) (VERY IMP) If we declare or initialize a string with small "s", it will give compilation ERROR.
+String in Java is always defined and declared with capital "S"
+2) As learned in the above mentioned IMP methods, compareTo() method always uses Object(also in case of Byte
+Wrapper class), whereas compare() method always uses primitive data type(Byte wrapper class does not have
+compare() method)
+3) compare(T o1, T o2) method of Comparator<T> interface has both arguments as Objects
+(Source: http://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html)
+compareTo(T o) method of Comparable<T> interface has arguments as Object
+That means while overriding compare() and compareTo() methods we have to use ojects as arguments since
+these methods are overridden from respective Comparator<T> and Comparable<T> interfaces
