@@ -41,7 +41,7 @@ public static Object returnObject(){
 }
 public static String returnString(){
 	return null;                        // CAN RETURN NULL for Wrapper class such as String, since there is no such thing called 'string'
-										// The primitive datatype of String is 'char' and NOT 'string'
+				       	// The primitive datatype of String Wrapper Class  is 'char' and NOT 'string'
 }
 
 public static double returndouble(){    
