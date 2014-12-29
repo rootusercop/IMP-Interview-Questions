@@ -1,0 +1,13 @@
+The fastest method present in String class in JAVA to convert charArray to String is the static method of String class
+called valueOf(charArray[]).
+
+Source: http://stackoverflow.com/questions/7655127/how-to-convert-a-char-array-back-to-a-string-java
+
+PLEASE DO REMEMBER THIS
+
+Example: 
+public static String sortString(String s){
+	char[] array = s.toCharArray();
+	Arrays.sort(array);
+	return String.valueOf(array);   // convert char array to String
+}
