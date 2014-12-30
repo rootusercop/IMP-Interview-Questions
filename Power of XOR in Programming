@@ -1,0 +1,38 @@
+Power of XOR in Programming: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/xor.html
+
+PLEASE READ THE CONTENT IN THE ABOVE LINK BEFORE SOLVING THE BELOW MENTIONED QUESTIONS:
+
+ALWAYS REMEMBER NUMBERS ARE STORED IN REGISTERS IN PROGRAMMING
+
+XOR Properties: (Source: http://en.wikipedia.org/wiki/Exclusive_or)
+I. Commutative: YES (i.e.  a XOR b XOR c = b XOR a XOR c = c XOR a XOR b and all possible combinations are true for
+any number of operands)
+PRACTICAL APPLICATION: Because of this property, we could solve the "find missing number" problem mentioned below in point(3).
+II. Associative: YES (i.e. a XOR (b XOR c) = (a XOR b) XOR c
+
+1. Swap two numbers without using temp variable:
+http://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/
+
+2. Detect if two numbers have different signs
+http://www.geeksforgeeks.org/detect-if-two-integers-have-opposite-signs/
+
+3. Find a SINGLE MISSING NUMBER in a sorted array of size n where the array elements are from 1 to n.
+(PLEASE note, only applicable for SINGLE missing number in a SORTED array of size n WHERE elements are from 1 to n)
+http://www.geeksforgeeks.org/find-the-missing-number/
+
+4. Compute absolute value of integer
+http://www.geeksforgeeks.org/compute-the-integer-absolute-value-abs-without-branching/
+BEFORE YOU GO AHEAD WITH THE ABOVE PROBLEM, PLEASE UNDERSTAND THE FOLLOWING:
+a. https://github.com/nkatre/Learning-Java/blob/master/Left%20Right%20Shift%20in%20Java
+b. How are positive numbers, negative numbers and characters represented in computer ?
+Ans. http://www.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/core-formats.html 
+https://www.youtube.com/watch?v=HhtecBhM_oA
+c. How are negative numbers represented in computer ? (Ans. 2's complement)
+Ans. https://www.rit.edu/~w-asc/documents/services/resources/handouts/DM3%20Two's%20Complement.pdf
+d. Why are negative numbers represented as 2's complment in computer ?
+Ans. VERY NICELY EXPLAINED HERE: 
+http://stackoverflow.com/questions/1125304/why-is-twos-complement-used-to-represent-negative-numbers
+
+5. Given an array in which all numbers except two are repeated once. (i.e. we have 2n+2 numbers and n numbers
+are occurring twice and remaining two have occurred once). Find those two numbers in the most efficient way.
+Ans. http://www.geeksforgeeks.org/find-two-non-repeating-elements-in-an-array-of-repeating-elements/
