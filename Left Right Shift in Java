@@ -1,0 +1,59 @@
+VERY IMPORTANCE SOURCES:
+http://www.xyzws.com/javafaq/how-do-the-bitwise-shift-operators-work/12
+http://stackoverflow.com/questions/10910913/how-do-shift-operators-work-in-java
+
+Summary:
+1. RIGHT SHIFT (>>)
+In >>, the void bits are filled in with previous contents of the leftmost bit.(FOR BOTH POSITIVE AND NEGATIVE NUMBERS)
+Note that right shifting ( >> ) always preserves the sign of the original number i.e. to say that a negative number will
+stay negative while a positive number will stay positive after a right shift ( >> ).
+
+Example:
+Consider 12 whose binary equivalent is 00000000 00000000 00000000 00001100 (binary for 32 bits). 
+Remember that the type operands (such as byte and short) are implicitly promoted to the int type before 
+any shift operators are applied. Let's shift it right 2 times.
+
+00000000 00000000 00000000 00001100 >> 2(times)
+When shifting right ( >> ) the leftmost bits exposed by the right shift are filled in with previous contents
+of the leftmost bit. This is the result of (12>>2):
+
+00000000 00000000 00000000 00000011 (3)
+Consider -12 whose binary equivalent is 11111111 11111111 11111111 11110100 (binary for 32 bits).
+Let's shift it right 2 times.
+
+11111111 11111111 11111111 11110100 >> 2(times)
+When shifting right ( >> ) the leftmost bits exposed by the right shift are filled in with previous contents of 
+the leftmost bit. This is the result of (-12>>2):
+
+11111111 11111111 11111111 11111101 (-3)
+
+2. Unsigned Right Shift Operator (>>>)
+In >>, the void bits are filled with 0's.(FOR BOTH POSITIVE AND NEGATIVE NUMBERS)
+Let's do 00000000 00000000 00000000 00001100 >>> 2 (12>>>2) and the result is 00000000 00000000 00000000 00000011 (3).
+Let's do 11111111 11111111 11111111 11110100 >>> 2 (-12>>>2) and the result is 00111111 11111111 11111111 11111101 (1073741821).
+
+3. LEFT SHIFT (<<)
+In <<, the void left behind by the shift is filled by zero's. (FOR BOTH POSITIVE AND NEGATIVE NUMBERS)
+
+Example: 
+Consider 12 whose binary equivalent is 00000000 00000000 00000000 00001100 (binary for 32 bits). 
+Remember that the type operands (such as byte and short) are implicitly promoted to the int type before any shift
+operators are applied. Let's shift it left 2 times.
+
+00000000 00000000 00000000 00001100 << 2(times)
+When you shift left ( << ) the void left behind by the shift is filled by zero's. This is the result of (12<<2):
+
+00000000 00000000 00000000 00110000 (48)
+Consider -12 whose binary equivalent is 11111111 11111111 11111111 11110100 (binary for 32 bits). Let's shift it left 2 times.
+
+11111111 11111111 11111111 11110100 << 2(times)
+When you shift left ( << ) the void left behind by the shift is filled by zero's. This is the result of (-12<<2):
+
+11111111 11111111 11111111 11010000 (-48)
+Let's do -12<<28 and the result is
+
+01000000 00000000 00000000 00000000 (1073741824)
+
+
+
+
