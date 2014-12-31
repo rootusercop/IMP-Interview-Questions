@@ -41,3 +41,10 @@ Solution: https://github.com/nkatre/Opearations-Variants-in-an-array/blob/master
                                                          OR
 The above question can also be given for String, where we need to find any two characters which are non-repeating in the String.
 Solution: https://github.com/nkatre/Opearations-Variants-in-an-array/blob/master/Find2NonRepeatingCharacters
+
+6. Given an array in which all numbers except 1 is repeated once. (i.e. we have 2n+1 numbers and n numbers
+are occurring twice and remaining one number have occurred once). Find the non-repeating number in the most efficient way.
+                                                         OR
+Given an array in which all characters except 1 is repeated once. (i.e. we have 2n+1 characters and n characters
+are occurring twice and remaining one character have occurred once). Find the non-repeating character in the most efficient way.
+Solution: https://github.com/nkatre/Opearations-Variants-in-an-array/blob/master/Find1NonRepeatingNumberORChracter
