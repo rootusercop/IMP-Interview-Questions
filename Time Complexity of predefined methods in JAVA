@@ -60,3 +60,12 @@ is immutable in JAVA. Also StringBuilder and StringBuffer classes each have subs
 
 Source: http://stackoverflow.com/questions/19814067/time-complexity-of-stringbuilder-reverse-method
 Solution: It is O(n). It is impossible to revert a String in less than O(n)
+
+***************************************************************************************************
+V. Time Complexity of indexOf() method of String class
+***************************************************************************************************
+Source: http://stackoverflow.com/questions/12752274/java-indexofstring-str-method-complexity
+The complexity of Java's implementation of indexOf is O(m*n) where n and m are the length of the search string
+and pattern respectively.
+What you can do to improve complexity is to use e.g., the Boyer-More algorithm to intelligently skip comparing
+logical parts of the string which cannot match the pattern.
