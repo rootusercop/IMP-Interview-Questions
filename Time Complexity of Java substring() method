@@ -18,6 +18,7 @@ Solution:
 Answer is option 2. O(n^3)
 
 Source: http://stackoverflow.com/questions/4679746/time-complexity-of-javas-substring
+        http://stackoverflow.com/questions/16123446/java-7-string-substring-complexity
 
 Explanation:
 It was O(1) in older versions of Java - as Jon stated, it just created a new String with the same underlying char[],
