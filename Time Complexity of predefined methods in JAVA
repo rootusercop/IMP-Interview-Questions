@@ -79,3 +79,17 @@ The size, isEmpty, get, set, iterator, and listIterator operations run in consta
 The add operation runs in amortized constant time, that is, adding n elements requires O(n) time. 
 All of the other operations run in linear time (roughly speaking).
 The constant factor is low compared to that for the LinkedList implementation.
+
+***************************************************************************************************
+V. Time Complexity for Lists, Maps and Classes. (more specifically, ArrayList, HashSet and HashMap) methods 
+***************************************************************************************************
+Source: http://www.acnenomor.com/2331736p1/time-complexity-of-hashmap-methods
+    remove: O(1)
+    size: O(1)
+    values: O(n) (on traversal through iterator)
+I think that remove() will be the same complexity as get(), O(1), assuming we don't have a giant HashMap with equal
+hashCodes, etc etc...
+For size() i'd also assume O(1), since a HashSet, which also has no order, has a size() method with complexity O(1).
+The one i have no idea of is values() - I'm not sure whether this method will just somehow "copy" the HashMap,
+giving a time complexity of O(1), or if it will have to iterate over the HashMap, making the complexity equal
+to the amount of elements stored in the HashMap.
