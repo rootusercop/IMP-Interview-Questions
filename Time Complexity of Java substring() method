@@ -1,0 +1,29 @@
+Question: What is the time complexity of the following program ?
+
+public static void calculateTimeComplexity(String s){
+  for(int i=0;i<s.length();i++){
+    for(int j=i;j>=0;j--){
+      System.out.println(s.substring(j,i+1));
+    }
+  }
+}
+
+Options: 1. O(n^2)
+         2. O(n^3)
+where n = length of the string
+
+
+Solution:
+
+Answer is option 2. O(n^3)
+
+Source: http://stackoverflow.com/questions/4679746/time-complexity-of-javas-substring
+
+Explanation:
+It was O(1) in older versions of Java - as Jon stated, it just created a new String with the same underlying char[],
+and a different offset and length.
+However, this has actually changed started with Java 7 update 6.
+The char[] sharing was eliminated, and the offset and length fields were removed. substring() now just copies all the 
+characters into a new String.
+Ergo, substring is O(n) in Java 7 update
+
