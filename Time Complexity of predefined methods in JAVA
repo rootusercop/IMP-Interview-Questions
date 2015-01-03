@@ -69,3 +69,13 @@ The complexity of Java's implementation of indexOf is O(m*n) where n and m are t
 and pattern respectively.
 What you can do to improve complexity is to use e.g., the Boyer-More algorithm to intelligently skip comparing
 logical parts of the string which cannot match the pattern.
+
+
+***************************************************************************************************
+V. Time Complexity of class ArrayList methods time complexity
+***************************************************************************************************
+Source: http://stackoverflow.com/questions/6540511/time-complexity-for-java-arraylist
+The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. 
+The add operation runs in amortized constant time, that is, adding n elements requires O(n) time. 
+All of the other operations run in linear time (roughly speaking).
+The constant factor is low compared to that for the LinkedList implementation.
