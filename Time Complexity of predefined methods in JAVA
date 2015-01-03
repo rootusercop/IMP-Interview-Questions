@@ -32,3 +32,10 @@ However, this has actually changed started with Java 7 update 6.
 The char[] sharing was eliminated, and the offset and length fields were removed. substring() now just copies all the 
 characters into a new String.
 Ergo, substring is O(n) in Java 7 update
+
+
+***************************************************************************************************
+II. Time Complexity of Arrays.sort() method
+***************************************************************************************************
+Soltion: The time complexity of this predefined method of Arrays class is nlgn
+Source: http://stackoverflow.com/questions/4254122/what-is-the-time-complexity-of-this-sort-method?rq=1
