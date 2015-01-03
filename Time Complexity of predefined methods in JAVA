@@ -35,7 +35,17 @@ Ergo, substring is O(n) in Java 7 update
 
 
 ***************************************************************************************************
-II. Time Complexity of Arrays.sort() method
+II. Time Complexity of Arrays.sort() and Collections.sort() static methods
 ***************************************************************************************************
-Soltion: The time complexity of this predefined method of Arrays class is nlgn
 Source: http://stackoverflow.com/questions/4254122/what-is-the-time-complexity-of-this-sort-method?rq=1
+Solution: The time complexity of this predefined method of Arrays class and Collections class is nlgn
+
+***************************************************************************************************
+III. Time Complexity of toCharArray() and toString() methods in JAVA
+***************************************************************************************************
+Source: http://stackoverflow.com/questions/13079261/what-is-the-runtime-of-tochararray-and-tostring-in-java
+Solution:
+As far as String.toCharArray() goes, it's O(N), where N is the number of characters in the string,
+because each character must be copied into the output.
+
+
