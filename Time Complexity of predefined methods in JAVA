@@ -48,4 +48,15 @@ Solution:
 As far as String.toCharArray() goes, it's O(N), where N is the number of characters in the string,
 because each character must be copied into the output.
 
+***************************************************************************************************
+IV. Time Complexity of reverse() method of StringBuilder and StringBuffer class in JAVA
+***************************************************************************************************
+NOTE: reverse() method is an instance method of StringBuilder class AND
+reverse() method is also an instance synchronized method of StringBuffer class in JAVA
 
+PLEASE NOTE THAT reverse() method is NOT PRESENT in String class of JAVA. The reason being String class
+in JAVA is immutable. However, for some reason substring() method is present in String class even though String 
+is immutable in JAVA. Also StringBuilder and StringBuffer classes each have substring() method.
+
+Source: http://stackoverflow.com/questions/19814067/time-complexity-of-stringbuilder-reverse-method
+Solution: It is O(n). It is impossible to revert a String in less than O(n)
