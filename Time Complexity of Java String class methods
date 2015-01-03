@@ -1,3 +1,7 @@
+***************************************************************************************************
+I. Time Complexity of substring() method in Java String class 
+***************************************************************************************************
+
 Question: What is the time complexity of the following program ?
 
 public static void calculateTimeComplexity(String s){
@@ -19,6 +23,7 @@ Answer is option 2. O(n^3)
 
 Source: http://stackoverflow.com/questions/4679746/time-complexity-of-javas-substring
         http://stackoverflow.com/questions/16123446/java-7-string-substring-complexity
+        http://stackoverflow.com/questions/25514062/what-is-the-time-complexity-of-java-stringbuilder-substring-method-if-it-is-l
 
 Explanation:
 It was O(1) in older versions of Java - as Jon stated, it just created a new String with the same underlying char[],
@@ -27,4 +32,3 @@ However, this has actually changed started with Java 7 update 6.
 The char[] sharing was eliminated, and the offset and length fields were removed. substring() now just copies all the 
 characters into a new String.
 Ergo, substring is O(n) in Java 7 update
-
