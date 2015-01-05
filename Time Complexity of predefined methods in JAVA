@@ -81,12 +81,14 @@ All of the other operations run in linear time (roughly speaking).
 The constant factor is low compared to that for the LinkedList implementation.
 
 ***************************************************************************************************
-V. Time Complexity for Lists, Maps and Classes. (more specifically, ArrayList, HashSet and HashMap) methods 
+V. Time Complexity for Lists, Maps and Set Classes. (more specifically, ArrayList, HashSet and HashMap) methods 
 ***************************************************************************************************
 Source: http://www.acnenomor.com/2331736p1/time-complexity-of-hashmap-methods
     remove: O(1) [method of List, Set, Map classes]
     size: O(1)  [method of List, Set, Map classes]
     values: O(n) (on traversal through iterator) [method of Map class]
+    contains: O(n) [method of HashMap[actually there are two methods containsKey(),containsValue()],
+                    HashSet, ArrayList]
 I think that remove() will be the same complexity as get(), O(1), assuming we don't have a giant HashMap with equal
 hashCodes, etc etc...
 For size() i'd also assume O(1), since a HashSet, which also has no order, has a size() method with complexity O(1).
