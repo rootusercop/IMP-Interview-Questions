@@ -87,8 +87,16 @@ Source: http://www.acnenomor.com/2331736p1/time-complexity-of-hashmap-methods
     remove: O(1) [method of List, Set, Map classes]
     size: O(1)  [method of List, Set, Map classes]
     values: O(n) (on traversal through iterator) [method of Map class]
-    contains: O(n) [method of HashMap[actually there are two methods containsKey(),containsValue()],
-                    HashSet, ArrayList]
+    contains: O(1) [method of HashSet] {uses hash function}
+    contains: O(n) [method of ArrayList] {to understand this, please understand first how ArrayList works internally.
+    ArrayList does not contain any hash method. Its actually an array as its name suggests}
+    How does ArrayList work internally ?
+    Ans: http://stackoverflow.com/questions/3467965/how-does-arraylist-work
+    containsKey: O(1) [method of HashMap]
+    {Source: http://stackoverflow.com/questions/8923251/what-is-the-time-complexity-of-hashmap-containskey-in-java}
+    containsValue: O(n) [method of HashMap] {since hash function only exists for key and not value,
+    hence it has to iterate through all elements of the HashMap to find the value. Hence O(n) operation
+    Source: http://stackoverflow.com/questions/16757359/what-is-the-time-complexity-of-hashmap-containsvalue-in-java}
                     
 VERY VERY HELPFUL TABLE OF TIME COMPLEXITY ANALYSIS:
 http://www.c-sharpcorner.com/UploadFile/0f68f2/comparative-analysis-of-list-hashset-and-sortedset/
