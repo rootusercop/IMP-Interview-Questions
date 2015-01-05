@@ -99,3 +99,82 @@ For size() i'd also assume O(1), since a HashSet, which also has no order, has a
 The one i have no idea of is values() - I'm not sure whether this method will just somehow "copy" the HashMap,
 giving a time complexity of O(1), or if it will have to iterate over the HashMap, making the complexity equal
 to the amount of elements stored in the HashMap.
+
+***************************************************************************************************
+VI. Time Complexity for different Collection Classes
+***************************************************************************************************
+VERY VERY IMP Source: http://www.javaexperience.com/time-complexity-of-collection-classes/
+
+Java ArrayList time complexity :
+
+Read/Search any element O(n). If you know the index then the complexity is O(1)
+Update : O(n)
+Delete at beginning: O(n)
+Delete in middle: O(n)
+Delete at end: O(n)
+Add at beginning: O(n)
+Add in middle: O(n)
+Add at end: O(n)
+
+Linked List time complexity : It has elements linked in one direction so as to provide ordered iteration
+of elements.
+
+Read/Search any element O(n)
+Update : O(n)
+Delete at beginning: O(1)
+Delete in middle: O(n)
+Delete at end: O(n)
+Add at beginning: O(1)
+Add in middle: O(n)
+Add at end: O(n)
+
+HashMap time complexity : The elements are placed randomly as per the hashcode. Here the assumption is
+that a good implementation of hashcode has been provided.
+
+Read/Search any element O(1)
+Update : O(1)
+Delete : O(1)
+Add : O(1)
+
+LinkedHashMap time complexity : The elements are placed randomly as with HashMap but are linked together 
+to provide ordered iteration of elements.
+
+Read/Search any element O(1)
+Update : O(1)
+Delete : O(1)
+Add at beginning: O(1)
+Add in middle: O(n)
+Add at end: O(n)
+
+HashSet time complexity : The elements are distributed randomly in memory using their hashcode. Here also 
+the assumption is that good hashcode which generated unique hashcode for different objects has been provided.
+
+Read/Search any element O(1)
+Update : O(1)
+Delete : O(1)
+Add : O(1)
+
+LinkedHashSet time complexity : It is same as HashSet with the addition of links between the elements of the Set.
+
+Read/Search any element O(1)
+Update : O(1)
+Delete : O(1)
+Add at beginning: O(1)
+Add in middle: O(n)
+Add at end: O(n)
+
+TreeMap time complexity : Provides natural sorting of elements. Uses equals, compare and compareTo methods
+to determine the sorting order.
+
+Read/Search any element O(log n)
+Update : O(log n)
+Delete : O(log n)
+Add : O(log n)
+
+TreeSet time complexity : Internally used an instances of TreeMap with the elements as key and a dummy 
+value for all entries in the TreeMap.
+
+Read/Search any element O(log n)
+Update : O(log n)
+Delete : O(log n)
+Add : O(log n)
