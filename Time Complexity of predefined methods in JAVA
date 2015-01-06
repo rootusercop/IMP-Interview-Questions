@@ -76,7 +76,11 @@ V. Time Complexity of class ArrayList methods time complexity
 ***************************************************************************************************
 Source: http://stackoverflow.com/questions/6540511/time-complexity-for-java-arraylist
 The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. 
-The add operation runs in amortized constant time, that is, adding n elements requires O(n) time. 
+The add operation runs in amortized constant time, that is, adding n elements requires O(n) time.  O(n) because,
+once the array is full(i.e. ArrayList is full), the array is copied to different location which has high memory,
+this copying of all the elements due to insufficient space causes (n) operation. Hence on an average,
+the time complexity is O(n), but if this case is avoided then the time complexity is O(1), similar to array addition
+operation.
 All of the other operations run in linear time (roughly speaking).
 The constant factor is low compared to that for the LinkedList implementation.
 
