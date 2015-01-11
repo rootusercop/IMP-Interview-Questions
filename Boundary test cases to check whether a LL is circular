@@ -5,7 +5,7 @@ Source: http://www.careercup.com/question?id=5670876009725952
 Ans:
 here are several approach to check whether link list is circular or not:- 
 
-1st Approach : 
+1st Approach : (Boolean Flag)
 Take a flag bit at each node and make it zero initially. While visiting each node make the flag bit as one if it is zero.
 If already flag bit found as one then loop exist that is circular list. 
 If somebody ask how we can take the flag bit at each node by own then you just give answer as while
@@ -13,11 +13,11 @@ doing programming we always take some extra bit for future purpose.so we make it
 not satisfied then just say i will take resize function to increase the size of node and then we use the flag bit. 
 Time complexity= O(n). 
 
-2nd Approach : 
+2nd Approach : (Address Array)
 Take an array. Store the 1st node next address and go to second node. while go to next node just check whether
 next address is already stored in array........and so on .Time complexity =O(square of n) 
 
-3rd approach: 
+3rd approach: (Slow and Fast Pointer)
 start with two pointer from starting point of the list and increase 1st pointer by one and 2nd by two if the
 pointer meet on same point then the list is circular list else not. 
 Time complexity = O(n). This is the best algorithm. Its time complexity is asymptotically order of n but actually 
