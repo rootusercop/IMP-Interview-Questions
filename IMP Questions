@@ -154,7 +154,7 @@ int main()
 }
 
 
-Longest Common Substring Problem:
+Longest Common SubSequence Problem:
 source -> http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence/
 
 /* Dynamic Programming implementation of LCS problem */
