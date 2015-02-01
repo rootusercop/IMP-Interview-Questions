@@ -1,3 +1,4 @@
+*******************************************************************************************************************
 2 SUM Problem
 http://coderevisited.com/2-sum-problem/
 http://www.careercup.com/question?id=15206700
@@ -35,7 +36,7 @@ public static void findTwoSum(int[] A, int x) {
         System.out.println("No pair exists whose sum is " + x);
 }
 
-
+***********************************************************************************************************
 To reverse a string in Java:
 
 package BST_Demo;
@@ -153,68 +154,133 @@ int main()
     return 0;
 }
 
-
+******************************************************************************************************
 Longest Common SubSequence Problem:
-source -> http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence/
+/*
+Question: Find the longest common subsequence between two strings
 
-/* Dynamic Programming implementation of LCS problem */
-#include<stdio.h>
-#include<stdlib.h>
-  
-int max(int a, int b);
-  
-/* Returns length of LCS for X[0..m-1], Y[0..n-1] */
-int lcs( char *X, char *Y, int m, int n )
-{
-   int L[m+1][n+1];
-   int i, j;
-  
-   /* Following steps build L[m+1][n+1] in bottom up fashion. Note 
-      that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */
-   for (i=0; i<=m; i++)
-   {
-     for (j=0; j<=n; j++)
-     {
-       if (i == 0 || j == 0)
-         L[i][j] = 0;
-  
-       else if (X[i-1] == Y[j-1])
-         L[i][j] = L[i-1][j-1] + 1;
-  
-       else
-         L[i][j] = max(L[i-1][j], L[i][j-1]);
-     }
-   }
-    
-   /* L[m][n] contains length of LCS for X[0..n-1] and Y[0..m-1] */
-   return L[m][n];
-}
-  
-/* Utility function to get max of 2 integers */
-int max(int a, int b)
-{
-    return (a > b)? a : b;
-}
-  
-/* Driver program to test above function */
-int main()
-{
-  char X[] = "AGGTAB";
-  char Y[] = "GXTXAYB";
-  
-  int m = strlen(X);
-  int n = strlen(Y);
-  
-  printf("Length of LCS is %d\n", lcs( X, Y, m, n ) );
-  
-  getchar();
-  return 0;
-}
-Time Complexity of the above implementation is O(mn) which is much better than the worst case
-time complexity of Naive Recursive implementation.
+Question and Answer Source: http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence/
 
-Please write comments if you find anything incorrect, or you want to share more information about
-the topic discussed above.
+Algortihm: 1. declare a matrix of s1.length()+1 and s2.length()+1.
+              +1 is to store the results of the previous matches
+           2. initialize row = 0 OR column = 0 to 0 which indicates that the previous matches was 0
+           3. for i=1 to s1.length+1 
+           		for j=1 to s2.length+1
+           			if(s1.charAt(i-1)==s2.charAt(j-1))
+           				dp[i][j]= dp[i-1][j-1]+1 // current match = previous match +1 
+           			else
+           				dp[i][j] = Math.max(dp[i-1][j],dp[i][j-1]) 
+           				
+           		// if the characters don't then the current matches = max of(previous matches)
+           				
+*/
 
+package SubstringAndSubsequenceProblems.Subsequence;
+
+import java.util.Scanner;
+
+
+public class LongestCommonSubsequence {
+	
+	
+	private static int[][] dp;  // matrix to store the match results
+	 
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		try{
+			System.out.println("LONGEST COMMON SUBSEQUENCE PROGRAM");
+			System.out.println("Enter the two strings");
+			String s1 = in.nextLine();
+			String s2 = in.nextLine();
+			System.out.println("The Longest common SUBSTRING using DP is: "+usingDP(s1,s2));
+
+			// Printing the Logest Common Subsequence
+			int lengthOfLCSubSequence = usingDP(s1,s2);
+			// we will construct a String of LCS from right to left. Hence we will use char array
+			// instead of using StringBuilder which is used to construct the string from left to right
+			
+			char[] LCSubSequence = new char[lengthOfLCSubSequence];
+			
+			// pass this char array along with the matrix and 2 strings to get the result of matches
+			String longestCommonSubsequence = buildLCSubsequence(LCSubSequence,s1,s2);
+			
+			System.out.println("The Longext Common SubSequence is: "+longestCommonSubsequence);
+		}
+		finally{
+			in.close();
+		}
+	}
+
+
+
+	private static int usingDP(String s1, String s2) {
+	        
+	        dp = new int[s1.length()+1][s2.length()+1];  // additional +1 to store the previous match result which is 0
+	        
+	        // fill the row with s1
+	        for(int i=0;i<(s1.length()+1);i++)
+	            dp[i][0] = 0;
+	            
+	        // fill the column with s2
+	        for(int j=0;j<(s2.length()+1);j++)
+	            dp[0][j] = 0;
+	        
+	         
+	        int result = 0; // to store the length of MAX COMMON SUBSEQUENCE MATCH
+	        
+	        // fill the remaining rows and columns based on matches
+	        for(int i=1;i<(s1.length()+1);i++){
+	            for(int j=1;j<(s2.length()+1);j++){
+	                
+	                // if current characters match then the length of the substring is previous matches + 1
+	                if(s1.charAt(i-1)==s2.charAt(j-1))
+	                    dp[i][j] = dp[i-1][j-1]+1;
+	                
+	                else  // if doesnt match then current match = Max of (previous matches)
+	                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+	                    
+	                result = Math.max(result,dp[i][j]);  // this is to check the maximum match found
+	                
+	            }
+	        }
+	        
+	        return result;
+	    }
+	
+	 private static String buildLCSubsequence(char[] LCSubSequence, String s1, String s2) {
+			
+		 
+		 	int i = s1.length();
+		 	int j = s2.length();
+		 	
+		 	int index = LCSubSequence.length-1;
+		 	
+		 	while(i>0 && j>0){ // greater than 0 because there is nothing at 0th row and 0th column in the match matrix
+		 	
+		 		if(s1.charAt(i-1)==s2.charAt(j-1)){ // -1 because i and j start from their respective lengths
+		 			// append the character
+		 			LCSubSequence[index]=s1.charAt(i-1);
+		 			// decrement the index
+		 			index--;
+		 			// decrement the i and j pointers
+		 			i--;
+		 			j--;
+		 		}
+		 		
+		 		// if the characters do not match then go in the max direction in the match matrix
+		 		
+		 		else if(dp[i-1][j]>dp[i][j-1])
+		 			i--;
+		 		
+		 		else
+		 			j--;
+		 		
+		 	}
+		 	
+		 	return String.valueOf(LCSubSequence);  // convert char array to string and return
+		 
+		 
+		}
+}
 
 
