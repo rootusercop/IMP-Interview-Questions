@@ -1,0 +1,4 @@
+Question:
+Does java have '\0' to mark the end of String similar to char array in C ?
+Answer Source: http://stackoverflow.com/questions/17815755/end-of-string-character-in-java
+Answer : No, no such character is used to mark the end of string in Java.
