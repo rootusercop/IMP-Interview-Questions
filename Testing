@@ -1,4 +1,4 @@
-Question: Your test randomly changes the comparison operators in your conditionals. This is which kind of testing? 
+Question 1: Your test randomly changes the comparison operators in your conditionals. This is which kind of testing? 
 Mutation test 
 Glass-box test 
 Black-box test 
@@ -20,3 +20,13 @@ http://www.techopedia.com/definition/20905/mutation-testing
 Glass-box test(Also called clear box testing, open box testing): http://www.tutorialspoint.com/software_testing_dictionary/glass_box_testing.htm
 Black-box test: http://stackoverflow.com/questions/402161/black-box-vs-white-box-testing
 Fuzz test: http://en.wikipedia.org/wiki/Fuzz_testing
+
+Question 2: Which of the following guarantees that you have exhaustively unit-tested a piece of code? 
+a. 100% C0 (statement) coverage 
+b. 100% C1 (branch) coverage 
+c. 100% C2 (path) coverage 
+d. None of the above
+Question Source: http://www.careercup.com/question?id=14946838
+
+Answer: None of the above. Testing is hard. 
+You could have tried every path, but not with every set of input values.
