@@ -1,0 +1,22 @@
+Question: Your test randomly changes the comparison operators in your conditionals. This is which kind of testing? 
+Mutation test 
+Glass-box test 
+Black-box test 
+Fuzz test
+
+Source: http://www.careercup.com/question?id=14921914
+
+Mutation test: 
+Fault-based Testing: directed towards “typical” faults that could occur in a program
+• Basic idea: – Take a program and test data generated for that program
+– Create a number of similar programs (mutants), each differing from the original in one small way, i.e., each
+ possessing a fault • e.g., replace addition operator by multiplication operator
+– The original test data are then run through the mutants
+– If test data detect all differences in mutants, then the mutants are said to bedead, and the test set isadequate
+
+http://www.uio.no/studier/emner/matnat/ifi/INF4290/v10/undervisningsmateriale/INF4290-Mutest.pdf
+http://www.techopedia.com/definition/20905/mutation-testing
+               
+Glass-box test(Also called clear box testing, open box testing): http://www.tutorialspoint.com/software_testing_dictionary/glass_box_testing.htm
+Black-box test: http://stackoverflow.com/questions/402161/black-box-vs-white-box-testing
+Fuzz test: http://en.wikipedia.org/wiki/Fuzz_testing
