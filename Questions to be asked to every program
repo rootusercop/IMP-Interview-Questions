@@ -1,0 +1,24 @@
+TR: SEBI SAUCY AAHE
+(SEBI SOSI)
+
+S -> Sample Input
+E -> Extreme Cases
+B -> Bugs
+I -> Iterative or Recursive
+
+S -> Streamlined
+O -> Optimal
+S -> Space and Time Complexity
+I -> Improve Space and Time Complexity
+
+Questions to be asked for each program:
+1. Did you test the code for SAMPLE input ?
+2. Did you handle EXTREME cases when the input is null, or 1, or 2 ? No, then handle the extreme cases.
+3. Does the program have BUGS ? If yes, then remove the bugs.
+4. Is the solution ITERATIVE or recursive ? If recursive, then implement iterative solution if it exists.
+5. Is the solution STREAMLINED ? Are all import statement included. If not streamlined then make it streamlined
+6. Is the solution OPTIMAL ? If no, then make it optimal
+7. What is the SPACE and time complexity ?
+8. Can you IMPROVE the space and time complexity ? If yes, then improve the space and time complexity
+
+FOLLOW EVEYTHING MENTIONED ABOVE RELIGIOUSLY FOR EVERY PROGRAM THAT YOU TYPE
