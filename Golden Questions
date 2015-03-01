@@ -14,7 +14,7 @@ S -> Space and Time Complexity
 I -> Improve Space and Time Complexity
 
 Questions to be asked for each program:
-1. Did you test the code for SAMPLE input ?
+1. Did you test the code for SAMPLE inputs ? If no, then test it for sample inputs.
 2. Did you handle EXTREME cases when the input is null, or 1, or 2 ? No, then handle the extreme cases.
 3. Does the program have BUGS ? If yes, then remove the bugs.
 4. Is the solution ITERATIVE or recursive ? If recursive, then implement iterative solution if it exists.
