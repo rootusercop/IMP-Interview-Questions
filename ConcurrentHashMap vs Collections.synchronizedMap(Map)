@@ -1,5 +1,7 @@
 Source: http://www.pixelstech.net/article/1394026282-ConcurrentHashMap-vs-Collections-synchronizedMap()
 http://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
+http://crunchify.com/hashmap-vs-concurrenthashmap-vs-synchronizedmap-how-a-hashmap-can-be-synchronized-in-java/
+
 
 The main difference between these two is that ConcurrentHashMap will lock only portion of the data which are 
 being updated while other portion of data can be accessed by other threads. However, Collections.synchronizedMap()
