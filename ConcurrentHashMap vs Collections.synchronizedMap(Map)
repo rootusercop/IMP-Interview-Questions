@@ -1,0 +1,43 @@
+Source: http://www.pixelstech.net/article/1394026282-ConcurrentHashMap-vs-Collections-synchronizedMap()
+http://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
+
+The main difference between these two is that ConcurrentHashMap will lock only portion of the data which are 
+being updated while other portion of data can be accessed by other threads. However, Collections.synchronizedMap()
+will lock all the data while updating, other threads can only access the data when the lock is released. 
+If there are many update operations and relative small amount of read operations, you should choose 
+ConcurrentHashMap.
+
+Also one other difference is that ConcurrentHashMap will not preserve the order of elements in the Map passed in.
+It is similar to HashMap when storing data. There is no guarantee that the element order is preserved. 
+While Collections.synchronizedMap(0 will preserve the elements order of the Map passed in. For example,
+if you pass a TreeMap to ConcurrentHashMap, the elements order in the ConcurrentHashMap may not be the same 
+as the order in the TreeMap, but Collections.synchronizedMap() will preserve the order.
+
+Furthermore, ConcurrentHashMap can guarantee that there is no ConcurrentModificationException thrown while 
+one thread is updating the map and another thread is traversing the iterator obtained from the map. 
+However, Collections.synchronizedMap() is not guaranteed on this. If we obtain an Iterator from 
+Collections.synchronizedMap() by calling map.keySet().iterator() and then traverse the iterator, 
+at the same time if another thread is trying to updating the map by calling map.put(K,V), we will get 
+a ConcurrentModificationException.
+
+Map<String,String> map = Collections.synchronizedMap(new TreeMap<String,String>());
+ 
+map.put("key1","value1");
+map.put("key2","value2");
+map.put("key3","value3");
+ 
+Set<Entry<String,String>> entries = map.entrySet();
+ 
+Iterator<Entry<String,String>> iter = entries.iterator();
+ 
+while(iter.hasNext()){
+    System.out.println(iter.next()); //Will throw ConcurrentModificationException
+    map.remove("key2");  
+}
+Now I am wondering whether there is one object which can preserve the insertion order of elements like 
+Collections.synchronizedMap() and also doesn't throw ConcurrentModificationException like ConcurrentHashMap. 
+Fortunately since 1.6 there is a class called ConcurrentSkipListMap which can fulfill these two requirements, 
+from the documentation, we can find that ConcurrentSkipListMap will not throw ConcurrentModificationException 
+and also it will preserve the insertion order of the Map passed in. The only drawback it may have is its 
+performance.
+
