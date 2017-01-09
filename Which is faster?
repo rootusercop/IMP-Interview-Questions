@@ -8,10 +8,10 @@ Ans: ArrayList, because it is not synchronized hence no synchronization overhead
 than Vector. Vector is thread-safe and hence contains synchronized methods and hence the overhead 
 and therefore slower in execution than ArrayList.
 
-Question: Which is faster, Hashtable or HashMap?
-Ans: HashMap, because it is not synchronized hence no synchronization overhead and hence it is faster 
+Question: Which is faster, Hashtable/HashMap OR Vector?
+Ans: Hashtable/HashMap, because it is not synchronized hence no synchronization overhead and hence it is faster 
 than Vector. Vector is thread-safe and hence contains synchronized methods and hence the overhead 
-and therefore slower in execution than Hashtable.
+and therefore slower in execution than Hashtable/HashMap.
 
 Question: Are Synchronized Methods Slower In Single Threaded Applications also?
 Source: http://stackoverflow.com/questions/973518/are-synchronized-methods-slower-in-single-threaded-applications
